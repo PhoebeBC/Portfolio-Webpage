@@ -12,63 +12,67 @@ p {
 text-wrap: balance;
 }
 
+/*Navigation bar*/
+
 #navbar {
-    display: flex;
+    display: flex; /*Keeps all items on singular line*/
     background-color: DarkSeaGreen;
-    position: fixed;
+    position: fixed; /*Mean nav bar will always be visible even when scrolling*/
     top: 0px;
     left: 0px;
     right: 0px;
-    padding-bottom: 5px;
+    padding-bottom: 5px; /*Keeps nave bar looking nice*/
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-between; /*Equally spaces out div elements in nave bar*/
 }
 .nav-list{
-    display: flex;
-    list-style-type: none;
-    margin: 0;
+    /*display: flex;*/
+    /*list-style-type: none;*//*To remove bullet points*/
+    margin: 0;/*keeps nave bar dimensions to nav bar id*/
     padding: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 li.nav-list-el {
-  display: block;
+  display: block; /*Removes bullet points*/
   color: black;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-  float: left;
+  /*text-align: center;*/
+  padding: 10px; /*width of gaps between list elements*/
+  /*text-decoration: none;*/
+  float: left; /*Keeps list horizontal*/
 }
 
+/*Section Class*/
 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    min-height: 600px;
+    display: flex; /*Displays divs nicely in each section*/
+    flex-direction: column; /*Keeps section titles above boxes*/
+    justify-content: center; /*centers divs on the horizontal axis*/
+    align-items: center; /*centers divs on the vertical axis*/
+    width: 100%; /*Ensures full width of screen is used*/
+    height: 100%; /*Ensures full height of section is used to stop elements from other sections overlapping*/
+    min-height: 600px; /*My attempt to keep all sections the same size - need a better solution*/
     background-color: Azure;
     border-color: black;
-    border-block-style: solid;
+    border-block-style: solid; /*Makes border visible*/
 }
 
+/*Home*/
 #home-content{
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row; /*Aligns divs within this div to be side by side and not stacked*/
+    flex-wrap: wrap;/*If screen becomes too small then the divs within will stack*/
     justify-content: center;
     align-items: center;
-    height:100%;
+    height:100%; /*Ensures it fills the container so when aligning centrally it looks good*/
     width: 100%;
 }
 
 #headshot-figure{
     margin-left: 10%;
     margin-right: 0;
-    padding-right: 10px;
+    /*padding-right: 10px;*/ /*Always a small gap between image and text*/
     align: center;
 }
 
@@ -77,30 +81,28 @@ section {
     max-width: 300px;
     height: 100%;
     max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+    /*object-fit: cover;*/
+    border-radius: 10px; /*Gives curved edges*/
 }
 
 #about{
-    margin-left: 5%;
-    margin-right: 0;
+    margin-left: 5%; /*Ensure gap between picture and text*/
+    margin-right: 0; /*Limits size of div to ensure fits and doesnt wrap*/
     max-width: 400px;
     padding: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: left;
-    float: left;
-    width: 50%;
+    /*align-items: left;*/ /*Alights elements on left of vertical axis*/
+    /*float: left;*/
+    /*width: 50%;*/
     height:100%;
 }
 
-
-
-#location-div {
+#location-div { /*for the location icon and location*/
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    gap: 6px;
+    /*justify-content: left;*/
+    align-items: center; /*Alights elements on centre of vertical axis*/
+    gap: 6px; /*Gap between icon and text*/
 }
