@@ -46,7 +46,7 @@ li.nav-list-el {
 section {
     display: flex; /*Displays divs nicely in each section*/
     flex-direction: column; /*Keeps section titles above boxes*/
-    justify-content: center; /*centers divs on the horizontal axis*/
+    /*justify-content: center; *//*centers divs on the horizontal axis*/
     align-items: center; /*centers divs on the vertical axis*/
     width: 100%; /*Ensures full width of screen is used*/
     height: 100%; /*Ensures full height of section is used to stop elements from other sections overlapping*/
@@ -54,6 +54,10 @@ section {
     background-color: Azure;
     border-color: black;
     border-block-style: solid; /*Makes border visible*/
+}
+
+.home-section{
+    justify-content: center;
 }
 
 /*Home*/
@@ -106,7 +110,13 @@ section {
     align-items: center; /*Alights elements on centre of vertical axis*/
     gap: 6px; /*Gap between icon and text*/
 }
-
+/*Section titles fo reach section*/
+.title {
+    display: flex;
+    height: 100%;
+    margin: 5% 0%;
+}
+/*Div excluding the title*/
 .projects-grid, .experience-grid, .extras-grid {
     margin: 0;
     padding: 0;
@@ -115,6 +125,61 @@ section {
     flex-wrap: wrap;/*If screen becomes too small then the divs within will stack*/
     justify-content: center;
     align-items: center;
+    justify-content: space-between;
     height:100%; /*Ensures it fills the container so when aligning centrally it looks good*/
+    width: 70%;
+}
+/*1st Div for box which includes header*/
+.projects-summary, .experience-summary, .extras-summary {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10%;
+    width: max-content;
+    flex-direction: column; /*Aligns divs within this div to be side by side and not stacked*/
+    align-items: center;
+    justify-content: left;
+     /*Ensures it fills the container so when aligning centrally it looks good*/
+}
+/*Header for each box*/
+.projects-summary h3, .experience-summary h3, .extras-summary h3 {
+    display: flex;
+    margin-bottom: 5%;
+}
+/*box div*/
+.projects-summary-box, .experience-summary-box, .extras-summary-box {
+    margin: 10%;
+    padding: 0% 7% 7% 7%;
+    display: flex;
     width: 100%;
+    height:100%;
+    max-width: 250px;
+    flex-direction: column; /*Aligns divs within this div to be side by side and not stacked*/
+    justify-content: space-between;
+    align-items: center;
+    height:100%; /*Ensures it fills the container so when aligning centrally it looks good*/
+    background-color: Cornsilk;
+    border-radius: 5px;
+}
+/*box content excluding button*/
+.projects-description, .experience-description, .extras-description {
+    margin: 0%;
+    padding: 0;
+    justify-content: center;
+    align-items: left;
+}
+.projects-description ul, #experience-skills ul  {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-top: 0%;
+  margin-bottom: 10%;
+}
+.experience-description ul, .extras-description ul  {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.projects-description h4, .experience-description h4, .extras-description h4 {
+  margin: 5% 0%;
 }
