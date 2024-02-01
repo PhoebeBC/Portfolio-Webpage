@@ -7,6 +7,9 @@
     --secondary-turquoise: #45567d;
     --third-color: #45567d;
 }*/
+body {
+    background-color: black;
+}
 
 p {
 text-wrap: balance;
@@ -24,6 +27,14 @@ text-wrap: balance;
     padding-bottom: 5px; /*Keeps nave bar looking nice*/
     width: 100%;
     justify-content: space-between; /*Equally spaces out div elements in nave bar*/
+}
+#navbar-bottom{
+    display: flex; /*Keeps all items on singular line*/
+    background-color: DarkSeaGreen;
+    padding: 5px,5px,10px,5px; /*Keeps nave bar looking nice*/
+    width: 100%;
+    justify-content: space-between; /*Equally spaces out div elements in nave bar*/
+    height: 33px;
 }
 .nav-list{
     /*display: flex;*/
@@ -58,6 +69,9 @@ section {
 
 .home-section{
     justify-content: center;
+}
+.contact-section{
+     justify-content: space-around;
 }
 
 /*Home*/
@@ -103,7 +117,7 @@ section {
     height:100%;
 }
 
-#location-div { /*for the location icon and location*/
+.picture-text { /*for the location icon and location*/
     display: flex;
     flex-direction: row;
     /*justify-content: left;*/
@@ -116,8 +130,9 @@ section {
     height: 100%;
     margin: 5% 0%;
 }
+
 /*Div excluding the title*/
-.projects-grid, .experience-grid, .extras-grid {
+.projects-grid, .experience-grid, .extras-grid, .contact-grid {
     margin: 0;
     padding: 0;
     display: flex;
@@ -182,4 +197,15 @@ section {
 }
 .projects-description h4, .experience-description h4, .extras-description h4 {
   margin: 5% 0%;
+}
+.projects-summary, .experience-summary, .extras-summary {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10%;
+    width: max-content;
+    flex-direction: column; /*Aligns divs within this div to be side by side and not stacked*/
+    align-items: center;
+    justify-content: left;
+     /*Ensures it fills the container so when aligning centrally it looks good*/
 }
