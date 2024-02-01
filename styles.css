@@ -1,12 +1,12 @@
-/*:root {
-    --main-white: #f0f0f0;
-    --main-black: #be3144;
-    --main-green: #45567d;
-    --main-turquoise: #303841;
-    --secondary-green: #45567d;
-    --secondary-turquoise: #45567d;
-    --third-color: #45567d;
-}*/
+:root {
+    main-white: #f0f0f0;
+    main-black: #be3144;
+    main-green: #45567d;
+    main-turquoise: #303841;
+    secondary-green: #45567d;
+    secondary-turquoise: #45567d;
+    third-color: #45567d;
+}
 body {
     background-color: black;
 }
