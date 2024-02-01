@@ -1,14 +1,28 @@
 :root {
-    main-white: #f0f0f0;
-    main-black: #be3144;
-    main-green: #45567d;
-    main-turquoise: #303841;
-    secondary-green: #45567d;
-    secondary-turquoise: #45567d;
-    third-color: #45567d;
+    white: #FFFFEA;
+    black: #292F36;
+    green: #73956F;
+    light-blue: #e0fbfc;
+    dark-blue: #095256;
+    light-green: #B9CAAD;
+    brown: #544B3D";
+    highlight: #E5D4ED;
 }
 body {
-    background-color: black;
+    background-color: #292F36;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-bottom:5%;
+    margin-top:1%;
+}
+h2, h3, h4, h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin:2% 0%;
 }
 
 p {
@@ -19,7 +33,7 @@ text-wrap: balance;
 
 #navbar {
     display: flex; /*Keeps all items on singular line*/
-    background-color: DarkSeaGreen;
+    background-color: #292F36;
     position: fixed; /*Mean nav bar will always be visible even when scrolling*/
     top: 0px;
     left: 0px;
@@ -27,30 +41,40 @@ text-wrap: balance;
     padding-bottom: 5px; /*Keeps nave bar looking nice*/
     width: 100%;
     justify-content: space-between; /*Equally spaces out div elements in nave bar*/
-}
-#navbar-bottom{
-    display: flex; /*Keeps all items on singular line*/
-    background-color: DarkSeaGreen;
-    padding: 5px,5px,10px,5px; /*Keeps nave bar looking nice*/
-    width: 100%;
-    justify-content: space-between; /*Equally spaces out div elements in nave bar*/
-    height: 33px;
-}
-.nav-list{
-    /*display: flex;*/
-    /*list-style-type: none;*//*To remove bullet points*/
-    margin: 0;/*keeps nave bar dimensions to nav bar id*/
-    padding: 0;
-    /*overflow: hidden;*/
+    color: #FFFFEA;
 }
 
-li.nav-list-el {
+#navbar-bottom{
+    background-color: #292F36;
+    width: 100%;
+    color: #FFFFEA;
+    height: 33px;
+}
+
+#reference {
+    padding-top:10px;
+    float: right;
+}
+
+.nav-list {
+    margin: 0;/*keeps nave bar dimensions to nav bar id*/
+    padding: 0;
+}
+
+/*for any li element with the class nav-list-el
+do these things*/
+.nav-list li{
   display: block; /*Removes bullet points*/
-  color: black;
-  /*text-align: center;*/
   padding: 10px; /*width of gaps between list elements*/
-  /*text-decoration: none;*/
   float: left; /*Keeps list horizontal*/
+}
+/*for any a element that is within an element
+that has the class nav-list-el*/
+.nav-list a, .nav-list li {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    color: #FFFFEA;
+    text-decoration-color: #292F36;
 }
 
 /*Section Class*/
@@ -69,7 +93,26 @@ section {
 
 .home-section{
     justify-content: center;
+    background-color: #73956F;
+    color: #e0fbfc;
 }
+
+.home-section h1{
+font-size: 2.5rem;
+}
+.home-section p{
+font-size: 0.5rem;
+}
+.home-section h2{
+font-size: 1.5rem;
+}
+
+.home-section{
+    justify-content: center;
+    background-color: #73956F;
+    color: #e0fbfc;
+}
+
 .contact-section{
      justify-content: space-around;
 }
@@ -106,7 +149,7 @@ section {
 #about{
     margin-left: 5%; /*Ensure gap between picture and text*/
     margin-right: 0; /*Limits size of div to ensure fits and doesnt wrap*/
-    max-width: 400px;
+    max-width: 450px;
     padding: 0;
     display: flex;
     flex-direction: column;
