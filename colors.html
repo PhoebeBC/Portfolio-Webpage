@@ -1,4 +1,5 @@
-<!--https://coolors.co/544b3d-73956f-b9caad-e5d4ed-ffffea-->
+<!--
+https://coolors.co/544b3d-73956f-b9caad-e5d4ed-ffffea
 
 <div style="background-color: 292F36;">gun metal</div>
 <div style="background-color: #436436;">Hunter Green</div>
@@ -18,22 +19,22 @@
 <div style="background-color: white; height: 100px;"></div>
 
 
- <!--Main white -->
+ &lt;!&ndash;Main white &ndash;&gt;
 <div style="background-color: #FFFFEA;">Ivory</div>
- <!--Main black -->
+ &lt;!&ndash;Main black &ndash;&gt;
 <div style="background-color: #292F36;">Black</div>
- <!--Primary color 1 green -->
+ &lt;!&ndash;Primary color 1 green &ndash;&gt;
 <div style="background-color: #73956F;">Asparagus</div>
- <!--Secondary color 2 blue -->
+ &lt;!&ndash;Secondary color 2 blue &ndash;&gt;
 <div style="background-color: #e0fbfc;">light cyan</div>
- <!--Primary color 2 blue -->
+ &lt;!&ndash;Primary color 2 blue &ndash;&gt;
 <div style="background-color: #095256;">midnight green</div>
- <!--Secondary color 1 green -->
+ &lt;!&ndash;Secondary color 1 green &ndash;&gt;
 <div style="background-color: #B9CAAD;">ash gay</div>
- <!--Tertiary color 1 -->
+ &lt;!&ndash;Tertiary color 1 &ndash;&gt;
 <div style="background-color: #544B3D">walnut brown</div>
- <!--Tertiary color 2 -->
-<!--<div style="background-color: #DECDF5;">Thistle</div>-->
+ &lt;!&ndash;Tertiary color 2 &ndash;&gt;
+&lt;!&ndash;<div style="background-color: #DECDF5;">Thistle</div>&ndash;&gt;
 <div style="background-color: #E5D4ED;">pale purple</div>
 
 <div style="background-color: white; height: 100px;"></div>
@@ -41,4 +42,42 @@
 
 <div style="font-family: 'Rale-way', sans-serif; font-size: 20px;">this is raleway</div>
 <div style="font-family: 'Poppins', sans-serif; font-size: 20px;">this is popins</div>
-<div style="font-family: tahoma; font-size: 20px;">this is tahoma</div>
+<div style="font-family: tahoma; font-size: 20px;">this is tahoma</div>-->
+
+
+    <div class="gallery">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg">
+    </div>
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery::after {
+  content: "";
+  width: 350px;
+}
