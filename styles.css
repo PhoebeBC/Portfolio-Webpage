@@ -1,10 +1,10 @@
 :root {
     --white: #f1f1ea;
     /*Greens*/
-    --green-highlight: #b8f397;
+    --green-highlight: #B9CAAD; /*#b8f397;*/
     --green-light: #9dd67d;
     --green-primary: #205106;
-    --green-dark: #072100;
+    --green-dark: #232E21;  /*#072100;*/
         /*Gray*/
     --gray-highlight: #d9e7cb;
     --gray-light: #bdcbb0;
@@ -15,7 +15,12 @@
     --blue-light: #a0cfd0;
     --blue-primary: #1e4e4e;
     --blue-dark: #002020;
+    /*formatting*/
+    --curve: 20px;
 }
+
+
+/*ELEMENTS*/
 
 body {
     background-color: #F3F7F5;
@@ -29,15 +34,22 @@ h1{
     margin-bottom:5%;
     margin-top:1%;
 }
+
 h2, h3, h4, h5{
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     margin:2% 0%;
-
 }
 
 p {
-text-wrap: balance;
+    text-wrap: balance;
+}
+
+section {
+    display: flex; /*Displays divs nicely in each section*/
+    flex-direction: column; /*Keeps section titles above boxes*/
+    align-items: center; /*centers divs on the vertical axis*/
+    height: 100vh;
 }
 
 /*Navigation bar*/
@@ -45,83 +57,38 @@ text-wrap: balance;
 
 nav {
     display: flex; /*Keeps all items on singular line*/
-    /*background-color: #98B9AB;*/
+    justify-content: space-between; /*Equally spaces out div elements in nave bar*/
     position: fixed; /*Mean nav bar will always be visible even when scrolling*/
-    top: 0px;
     left: 0px;
     right: 0px;
+    z-index: 10;
     padding-bottom: 5px; /*Keeps nave bar looking nice*/
-    width: 100%;
-    justify-content: space-between; /*Equally spaces out div elements in nave bar*/
-    color: #FFFFEA;
-    border-radius: 0px 0px 20px 20px;
-    background-color: #4A6D5F;
-    color: #F3F7F5;
-    text-decoration-color: #4A6D5F;
-}
-
-footer {
-    background-color: #98B9AB;
-    width: 100%;
-    color: #111815;
-    height: 33px;
-}
-
-#reference {
-    padding-top:10px;
-    float: right;
+    border-radius: 0px 0px var(--curve) var(--curve);
+    background-color: var(--blue-dark);
 }
 
 nav ul {
     margin: 0;/*keeps nave bar dimensions to nav bar id*/
-    padding: 0;
 }
 
-/*for any li element with the class nav-list-el
-do these things*/
 nav ul li{
   display: block; /*Removes bullet points*/
-  padding: 10px; /*width of gaps between list elements*/
   float: left; /*Keeps list horizontal*/
 }
 
-/*for any a element that is within an element
-that has the class nav-list-el*/
 nav ul a, nav ul li, #name {
     font-size: 1.5rem;
     padding: 0.4rem;
-    color: #F3F7F5;
-    text-decoration-color: #4A6D5F;
-}
-
-#name  {
- border-radius: 0px 0px 20px 0px;
- padding-right: 10px;
-}
-
-#nav-contact li  {
- border-radius: 0px 0px 0px 20px;
+    font-weight: 550;
+    color: var(--blue-highlight);
+    text-decoration-color: var(--blue-dark); /*Needs to be same as nav background*/
 }
 
 
-/*Section Class*/
-
-section {
-    display: flex; /*Displays divs nicely in each section*/
-    flex-direction: column; /*Keeps section titles above boxes*/
-    /*justify-content: center; *//*centers divs on the horizontal axis*/
-    align-items: center; /*centers divs on the vertical axis*/
-    width: 100%; /*Ensures full width of screen is used*/
-    height: 100%; /*Ensures full height of section is used to stop elements from other sections overlapping*/
-    min-height: 600px; /*My attempt to keep all sections the same size - need a better solution*/
-}
-
-
-/*Home section*/
+/*HOME*/
 
 #home{
-    justify-content: center;
-    background-color: #072100;
+    background-color: var(--green-dark);
     color: var(--white);
 }
 
@@ -129,6 +96,7 @@ section {
     font-size: 2.5rem;
     color: #3e4a35;
 }
+
 #home p{
     font-size: 0.5rem;
 }
@@ -137,92 +105,30 @@ section {
     font-size: 1.5rem;
 }
 
-/*Projects section*/
-#projects{
-     background-color: #232E21;
-}
-
-#projects h2 {
-     color: #B9CAAD;
-     font-size: 2rem;
-}
-#projects h3 {
-     color: #292F36;
-     font-size: 1.5rem;
-     padding-top: 5px;
-}
-
-.projects-summary div{
-    margin: 20px;
-    color: #292F36;
-    background-color: #B9CAAD;;
-}
-
-
-/*Experience section*/
-#experience{
-     background-color: #73956F;
-}
-
-
-/*Extras section*/
-.extras-section{
-     background-color: #B9CAAD;
-}
-
-/*Contact section*/
-.contact-section{
-     justify-content: space-around;
-     background-color: #73956F;
-}
-
-
-/*Home*/
 #home-content{
-    margin: 10% 10%;
-    padding: 0;
+    margin: auto 10%;
+    padding: 3% 0;
+    position: relative;
+    top: 15px;
     display: flex;
-    flex-direction: row; /*Aligns divs within this div to be side by side and not stacked*/
-    flex-wrap: wrap;/*If screen becomes too small then the divs within will stack*/
     justify-content: center;
     align-items: center;
-    height:100%; /*Ensures it fills the container so when aligning centrally it looks good*/
+    max-height: 70%;
     width: 70%;
     border-radius: 40px;
-    background-color: #bdcbb0;
-}
-
-#home-content figure{
-    margin-left: 2%;
-    margin-right: 10%;
-    /*padding-right: 10px;*/ /*Always a small gap between image and text*/
-    align: center;
+    background-color: var(--green-highlight);
 }
 
 #headshot {
-    width: 100%;
-    max-width: 300px;
-    height: 100%;
-    max-height: 300px;
-    /*object-fit: cover;*/
-    border-radius: 30px; /*Gives curved edges*/
+    height: -webkit-fill-available;
+    padding: 0 3%;
 }
 
 #about{
-    margin-left: 5%; /*Ensure gap between picture and text*/
-    margin-right: 0; /*Limits size of div to ensure fits and doesnt wrap*/
-    max-width: 450px;
-    padding: 0;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    /*align-items: left;*/ /*Alights elements on left of vertical axis*/
-    /*float: left;*/
-    /*width: 50%;*/
-    height:100%;
-}
-#about br {
-
+    flex-direction: column;
+    padding: 0 3%;
 }
 
 .picture-text { /*for the location icon and location*/
@@ -232,57 +138,62 @@ section {
     align-items: center; /*Alights elements on centre of vertical axis*/
     gap: 6px; /*Gap between icon and text*/
 }
-/*Section titles fo reach section*/
-.title {
-    display: flex;
-    height: 100%;
-    margin: 5% 0%;
+
+
+/*PROJECTS*/
+
+#projects{
+     background-color: var(--gray-primary);
+     color: var(--gray-light);
 }
 
-/*Div excluding the title*/
-.projects-grid, .experience-grid, .extras-grid, .contact-grid {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row; /*Aligns divs within this div to be side by side and not stacked*/
-    flex-wrap: wrap;/*If screen becomes too small then the divs within will stack*/
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    height:100%; /*Ensures it fills the container so when aligning centrally it looks good*/
-    width: 70%;
+#projects h2 {
+    color: var(--gray-light);
+    font-size: 2rem;
 }
+#projects h3 {
+     color: var(--gray-dark);
+     font-size: 1.5rem;
+     padding-top: 5px;
+}
+
+/*Section titles for each section*/
+.title {
+    margin: 2%;
+}
+
 /*1st Div for box which includes header*/
 .summary {
-    margin: 0;
-    padding: 0;
+    /* position: relative; */
+    /* top: 15px; */
     display: flex;
-    gap: 10%;
-    width: max-content;
-    flex-direction: column; /*Aligns divs within this div to be side by side and not stacked*/
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: row; /*Aligns divs within this div to be side by side and not stacked*/
      /*Ensures it fills the container so when aligning centrally it looks good*/
+    /* margin: auto; */
 }
 /*Header for each box*/
-.projects-summary h3, .experience-summary h3, .extras-summary h3 {
+.summary h3{
     display: flex;
     margin-bottom: 5%;
 }
 /*box div*/
 .summary-box {
-    margin: 10%;
-    padding: 7% 7% 7% 7%;
+    margin: 0 20px;
+    padding: 0 2%;
     display: flex;
     width: 100%;
-    height:100%;
+    max-height: 80%;
     max-width: 250px;
     flex-direction: column; /*Aligns divs within this div to be side by side and not stacked*/
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    height:100%; /*Ensures it fills the container so when aligning centrally it looks good*/
-    background-color: Cornsilk;
-    border-radius: 5px;
+    color: var(--gray-dark);
+    background-color: var(--gray-highlight);
+    border-radius: var(--curve);
 }
 /*box content excluding button*/
 .summary-description {
@@ -295,7 +206,29 @@ section {
     text-decoration: none;
 }
 
-.projects-description ul, #experience-skills ul  {
+/*EXPERIENCE*/
+
+#experience{
+     background-color: #73956F;
+}
+
+
+/*EXTRAS*/
+.extras-section{
+     background-color: #B9CAAD;
+}
+
+/*CONTACT*/
+.contact-section{
+     justify-content: space-around;
+     background-color: #73956F;
+}
+
+
+
+
+
+/*.projects-description ul, #experience-skills ul  {
   list-style-position: inside;
   padding-left: 0;
   margin-top: 0%;
@@ -309,15 +242,16 @@ section {
 }
 .projects-description h4, .experience-description h4, .extras-description h4 {
   margin: 5% 0%;
+}*/
+
+footer {
+    background-color: #98B9AB;
+    width: 100%;
+    color: #111815;
+    height: 33px;
 }
-.projects-summary, .experience-summary, .extras-summary {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 10%;
-    width: max-content;
-    flex-direction: column; /*Aligns divs within this div to be side by side and not stacked*/
-    align-items: center;
-    justify-content: left;
-     /*Ensures it fills the container so when aligning centrally it looks good*/
+
+#reference {
+    padding-top:10px;
+    float: right;
 }
