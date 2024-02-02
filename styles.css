@@ -1,15 +1,22 @@
 :root {
-    white: #FFFFEA;
-    black: #292F36;
-    green: #73956F;
-    light-blue: #e0fbfc;
-    140E3B
-    raisin black: 1D1E2C;
-    dark-green: 232E21;
-    light-green: #B9CAAD;
-    brown: #544B3D;
-    highlight: #E5D4ED;
+    --white: #f1f1ea;
+    /*Greens*/
+    --green-highlight: #b8f397;
+    --green-light: #9dd67d;
+    --green-primary: #205106;
+    --green-dark: #072100;
+        /*Gray*/
+    --gray-highlight: #d9e7cb;
+    --gray-light: #bdcbb0;
+    --gray-primary: #3e4a35;
+    --gray-dark: #131f0d;
+        /*Blue*/
+    --blue-highlight: #bbebec;
+    --blue-light: #a0cfd0;
+    --blue-primary: #1e4e4e;
+    --blue-dark: #002020;
 }
+
 body {
     background-color: #F3F7F5;
     font-family: 'Poppins', sans-serif;
@@ -47,6 +54,10 @@ nav {
     width: 100%;
     justify-content: space-between; /*Equally spaces out div elements in nave bar*/
     color: #FFFFEA;
+    border-radius: 0px 0px 20px 20px;
+    background-color: #4A6D5F;
+    color: #F3F7F5;
+    text-decoration-color: #4A6D5F;
 }
 
 footer {
@@ -61,14 +72,14 @@ footer {
     float: right;
 }
 
-.nav-list {
+nav ul {
     margin: 0;/*keeps nave bar dimensions to nav bar id*/
     padding: 0;
 }
 
 /*for any li element with the class nav-list-el
 do these things*/
-.nav-list li{
+nav ul li{
   display: block; /*Removes bullet points*/
   padding: 10px; /*width of gaps between list elements*/
   float: left; /*Keeps list horizontal*/
@@ -76,19 +87,18 @@ do these things*/
 
 /*for any a element that is within an element
 that has the class nav-list-el*/
-.nav-list a, .nav-list li {
+nav ul a, nav ul li, #name {
     font-size: 1.5rem;
-    background-color: #4A6D5F;
     padding: 0.4rem;
     color: #F3F7F5;
     text-decoration-color: #4A6D5F;
-    border-radius: 0px 0px 20px 20px;
 }
 
-#name li  {
+#name  {
  border-radius: 0px 0px 20px 0px;
  padding-right: 10px;
 }
+
 #nav-contact li  {
  border-radius: 0px 0px 0px 20px;
 }
@@ -109,34 +119,34 @@ section {
 
 /*Home section*/
 
-.home-section{
+#home{
     justify-content: center;
     background-color: #072100;
-    color: #f1f1ea;
+    color: var(--white);
 }
 
-.home-section h1{
+#home h1{
     font-size: 2.5rem;
     color: #3e4a35;
 }
-.home-section p{
+#home p{
     font-size: 0.5rem;
 }
 
-.home-section h2{
+#home h2{
     font-size: 1.5rem;
 }
 
 /*Projects section*/
-.projects-section{
+#projects{
      background-color: #232E21;
 }
 
-.projects-section h2 {
+#projects h2 {
      color: #B9CAAD;
      font-size: 2rem;
 }
-.projects-section h3 {
+#projects h3 {
      color: #292F36;
      font-size: 1.5rem;
      padding-top: 5px;
@@ -150,7 +160,7 @@ section {
 
 
 /*Experience section*/
-.experience-section{
+#experience{
      background-color: #73956F;
 }
 
@@ -182,7 +192,7 @@ section {
     background-color: #bdcbb0;
 }
 
-#headshot-figure{
+#home-content figure{
     margin-left: 2%;
     margin-right: 10%;
     /*padding-right: 10px;*/ /*Always a small gap between image and text*/
@@ -210,6 +220,9 @@ section {
     /*float: left;*/
     /*width: 50%;*/
     height:100%;
+}
+#about br {
+
 }
 
 .picture-text { /*for the location icon and location*/
@@ -240,7 +253,7 @@ section {
     width: 70%;
 }
 /*1st Div for box which includes header*/
-.projects-summary, .experience-summary, .extras-summary {
+.summary {
     margin: 0;
     padding: 0;
     display: flex;
@@ -257,7 +270,7 @@ section {
     margin-bottom: 5%;
 }
 /*box div*/
-.projects-summary-box, .experience-summary-box, .extras-summary-box {
+.summary-box {
     margin: 10%;
     padding: 7% 7% 7% 7%;
     display: flex;
@@ -272,12 +285,16 @@ section {
     border-radius: 5px;
 }
 /*box content excluding button*/
-.projects-description, .experience-description, .extras-description {
+.summary-description {
     margin: 0%;
     padding: 0;
     justify-content: center;
     align-items: left;
 }
+.summary-description li {
+    text-decoration: none;
+}
+
 .projects-description ul, #experience-skills ul  {
   list-style-position: inside;
   padding-left: 0;
