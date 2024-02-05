@@ -21,9 +21,8 @@
 
 
 /*ELEMENTS*/
-
 body {
-    background-color: #F3F7F5;
+    background-color: var(--green-dark);
     font-family: 'Poppins', sans-serif;
     margin:0;
 }
@@ -52,8 +51,8 @@ section {
     height: 100vh;
 }
 
-/*Navigation bar*/
 
+/*Navigation bar*/
 
 nav {
     display: flex; /*Keeps all items on singular line*/
@@ -94,7 +93,7 @@ nav ul a, nav ul li, #name {
 
 #home h1{
     font-size: 2.5rem;
-    color: #3e4a35;
+    color: var(--gray-primary);
 }
 
 #home p{
@@ -178,6 +177,7 @@ nav ul a, nav ul li, #name {
      /*Ensures it fills the container so when aligning centrally it looks good*/
     /* margin: auto; */
 }
+
 /*box div*/
 .summary-box {
     margin: 0 20px 5%;
@@ -194,6 +194,7 @@ nav ul a, nav ul li, #name {
     background-color: var(--gray-highlight);
     border-radius: var(--curve);
 }
+
 /*box content excluding button*/
 .summary-description {
     margin: 0%;
@@ -203,13 +204,16 @@ nav ul a, nav ul li, #name {
     flex-direction: column;
     justify-content: flex-start;
 }
+
 .summary-description ul {
     padding-left: 10%;
 }
+
 .summary-box a {
     padding-bottom: 5%;
     color: var(--gray-dark);
 }
+
 
 /*EXPERIENCE*/
 
@@ -217,10 +221,12 @@ nav ul a, nav ul li, #name {
      background-color: var(--green-highlight);
      color: var(--green-dark);
 }
+
 #experience h2 {
     color: var(--green-dark);
     font-size: 2rem;
 }
+
 #experience h3 {
     color: var(--green-highlight);
     font-size: 1.5rem;
@@ -229,11 +235,13 @@ nav ul a, nav ul li, #name {
     margin: auto;
     text-align: center;
 }
+
 /*box div*/
 #experience .summary-box {
     color: var(--green-highlight);
     background-color: var(--green-dark);
 }
+
 #experience a {
     padding-bottom: 5%;
     color: var(--green-highlight);
@@ -244,17 +252,18 @@ nav ul a, nav ul li, #name {
 /*.summary-description li in projects section*/
 
 
-
-
 /*EXTRAS*/
+
 #extras{
      background-color: var(--gray-dark);
      color: var(--gray-highlight);
 }
+
 #extras h2 {
     color: var(--gray-highlight);
     font-size: 2rem;
 }
+
 #extras h3 {
     color: var(--gray-dark);
     font-size: 1.5rem;
@@ -263,54 +272,77 @@ nav ul a, nav ul li, #name {
     margin: auto;
     text-align: center;
 }
+
 /*box div*/
 #extras .summary-box {
     color: varvar(--gray-dark);
     background-color: var(--gray-highlight);
 }
+
 #extras a {
     padding-bottom: 5%;
     color: var(--gray-dark);
 }
 
+
 /*CONTACT*/
-.contact-section{
-     justify-content: space-around;
-     background-color: #73956F;
+
+#contact{
+    background-color: var(--green-dark);
+    color: var(--white);
+}
+
+#contact h2 {
+    color: var(--green-highlight);
+    font-size: 2rem;
+}
+
+#contact .home-content{
+    margin: auto 10%;
+    padding: 3% 0;
+    position: relative;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 70%;
+    width: 70%;
+    border-radius: 40px;
+    background-color: var(--green-highlight);
+}
+
+#message{
+    font-size: 1.5rem;
+    color: var(--gray-primary);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin: 2%;
+    text-align: center;
+}
+#message span{
+    font-size: 2rem;
+}
+
+#contact .about{
+    justify-content: space-between;
+    padding: 2%;
+    min-height: 100%;
 }
 
 
-
-
-
-/*.projects-description ul, #experience-skills ul  {
-  list-style-position: inside;
-  padding-left: 0;
-  margin-top: 0%;
-  margin-bottom: 10%;
-}
-.experience-description ul, .extras-description ul  {
-  list-style-position: inside;
-  padding-left: 0;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-.projects-description h4, .experience-description h4, .extras-description h4 {
-  margin: 5% 0%;
-}*/
+/*Footer*/
 footer {
     display: flex; /*Keeps all items on singular line*/
     justify-content: end; /*Equally spaces out div elements in nave bar*/
     left: 0px;
     right: 0px;
-    padding-bottom: 5px; /*Keeps nave bar looking nice*/
     border-radius: var(--curve) var(--curve) 0px 0px;
     background-color: var(--blue-dark);
 }
 
 #reference {
    font-size: .5rem;
-   padding: 0.4rem;
+   padding: 0.5rem;
    font-weight: 550;
    color: var(--blue-highlight);
    text-align: center;
