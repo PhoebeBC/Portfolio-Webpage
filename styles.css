@@ -105,7 +105,7 @@ nav ul a, nav ul li, #name {
     font-size: 1.5rem;
 }
 
-#home-content{
+.home-content{
     margin: auto 10%;
     padding: 3% 0;
     position: relative;
@@ -124,7 +124,7 @@ nav ul a, nav ul li, #name {
     padding: 0 3%;
 }
 
-#about{
+.about{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -157,7 +157,7 @@ nav ul a, nav ul li, #name {
     display: flex;
     padding: 5%;
     margin: auto;
-    align-items: center;
+    text-align: center;
 }
 
 /*Section titles for each section*/
@@ -203,10 +203,9 @@ nav ul a, nav ul li, #name {
     flex-direction: column;
     justify-content: flex-start;
 }
-.summary-description li {
-    text-decoration: none;
+.summary-description ul {
+    padding-left: 10%;
 }
-
 .summary-box a {
     padding-bottom: 5%;
     color: var(--gray-dark);
@@ -218,33 +217,60 @@ nav ul a, nav ul li, #name {
      background-color: var(--green-highlight);
      color: var(--green-dark);
 }
-
 #experience h2 {
-    color: var(--green-highlight);
+    color: var(--green-dark);
     font-size: 2rem;
 }
 #experience h3 {
-     color: var(--green-highlight);
-     font-size: 1.5rem;
-     padding-top: 5px;
+    color: var(--green-highlight);
+    font-size: 1.5rem;
+    display: flex;
+    padding: 5% 0;
+    margin: auto;
+    text-align: center;
 }
-
-/*title in projects section*/
-/*.summary in projects section*/
-/*.summary h3 in projects section*/
-/*.summary-description in projects section*/
-/*.summary-description li in projects section*/
-
 /*box div*/
 #experience .summary-box {
     color: var(--green-highlight);
     background-color: var(--green-dark);
 }
+#experience a {
+    padding-bottom: 5%;
+    color: var(--green-highlight);
+}
+/*title in projects section*/
+/*.summary in projects section*/
+/*.summary-description in projects section*/
+/*.summary-description li in projects section*/
+
+
 
 
 /*EXTRAS*/
-.extras-section{
-     background-color: #B9CAAD;
+#extras{
+     background-color: var(--gray-dark);
+     color: var(--gray-highlight);
+}
+#extras h2 {
+    color: var(--gray-highlight);
+    font-size: 2rem;
+}
+#extras h3 {
+    color: var(--gray-dark);
+    font-size: 1.5rem;
+    display: flex;
+    padding: 5% 0;
+    margin: auto;
+    text-align: center;
+}
+/*box div*/
+#extras .summary-box {
+    color: varvar(--gray-dark);
+    background-color: var(--gray-highlight);
+}
+#extras a {
+    padding-bottom: 5%;
+    color: var(--gray-dark);
 }
 
 /*CONTACT*/
@@ -272,15 +298,20 @@ nav ul a, nav ul li, #name {
 .projects-description h4, .experience-description h4, .extras-description h4 {
   margin: 5% 0%;
 }*/
-
 footer {
-    background-color: #98B9AB;
-    width: 100%;
-    color: #111815;
-    height: 33px;
+    display: flex; /*Keeps all items on singular line*/
+    justify-content: end; /*Equally spaces out div elements in nave bar*/
+    left: 0px;
+    right: 0px;
+    padding-bottom: 5px; /*Keeps nave bar looking nice*/
+    border-radius: var(--curve) var(--curve) 0px 0px;
+    background-color: var(--blue-dark);
 }
 
 #reference {
-    padding-top:10px;
-    float: right;
+   font-size: .5rem;
+   padding: 0.4rem;
+   font-weight: 550;
+   color: var(--blue-highlight);
+   text-align: center;
 }
