@@ -152,9 +152,12 @@ nav ul a, nav ul li, #name {
     font-size: 2rem;
 }
 #projects h3 {
-     color: var(--gray-dark);
-     font-size: 1.5rem;
-     padding-top: 5px;
+    color: var(--gray-dark);
+    font-size: 1.5rem;
+    display: flex;
+    padding: 5%;
+    margin: auto;
+    align-items: center;
 }
 
 /*Section titles for each section*/
@@ -175,21 +178,17 @@ nav ul a, nav ul li, #name {
      /*Ensures it fills the container so when aligning centrally it looks good*/
     /* margin: auto; */
 }
-/*Header for each box*/
-.summary h3{
-    display: flex;
-    margin-bottom: 5%;
-}
 /*box div*/
 .summary-box {
-    margin: 0 20px;
+    margin: 0 20px 5%;
     padding: 0 2%;
     display: flex;
+    min-block-size: -webkit-fill-available;
     width: 100%;
     max-height: 80%;
     max-width: 250px;
-    flex-direction: column; /*Aligns divs within this div to be side by side and not stacked*/
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     color: var(--gray-dark);
     background-color: var(--gray-highlight);
@@ -199,17 +198,47 @@ nav ul a, nav ul li, #name {
 .summary-description {
     margin: 0%;
     padding: 0;
-    justify-content: center;
     align-items: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .summary-description li {
     text-decoration: none;
 }
 
+.summary-box a {
+    padding-bottom: 5%;
+    color: var(--gray-dark);
+}
+
 /*EXPERIENCE*/
 
 #experience{
-     background-color: #73956F;
+     background-color: var(--green-highlight);
+     color: var(--green-dark);
+}
+
+#experience h2 {
+    color: var(--green-highlight);
+    font-size: 2rem;
+}
+#experience h3 {
+     color: var(--green-highlight);
+     font-size: 1.5rem;
+     padding-top: 5px;
+}
+
+/*title in projects section*/
+/*.summary in projects section*/
+/*.summary h3 in projects section*/
+/*.summary-description in projects section*/
+/*.summary-description li in projects section*/
+
+/*box div*/
+#experience .summary-box {
+    color: var(--green-highlight);
+    background-color: var(--green-dark);
 }
 
 
