@@ -427,7 +427,7 @@ footer {
     }
 }
 
-@media screen and (min-height: 750px) {
+@media screen and (min-width: 1500px) {
   #home h2{
     font-size: 2rem;
     }
@@ -448,4 +448,63 @@ footer {
   .summary-box {
     justify-content: space-evenly;
     }
+}
+
+@media screen and (max-width: 500px) {
+  section{
+    max-height: 1600px;
+    height: 300vh;
+    min-block-size: auto;
+  }
+  #home, #contact {
+    height: 100vh;
+  }
+  #projects{
+    max-height: 1400px;
+  }
+  #home h2{
+    font-size: 1rem;
+    }
+  .home-content{
+    justify-content: space-evenly;
+    padding: 5% 0 8% 0;
+    flex-direction: column;
+    min-block-size: auto;
+  }
+  #headshot {
+    height: 45%;
+    }
+  .summary{
+    flex-direction: column;
+    }
+  .summary-box {
+    min-block-size: auto;
+    justify-content: center;
+    }
+  #contact .summary{
+    flex-direction: column;
+  }
+  .contact-icon img{
+    max-height: 100%;
+    width: 100px;
+    object-fit: cover;
+}
+  #email-icon{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    }
+  #email p{
+    padding-top: 0;
+    margin-top: 0;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    }
+  #contact .home-content {
+    max-height: 80%;
+  }
 }
