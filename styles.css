@@ -116,6 +116,7 @@ nav ul a:hover, nav ul li:hover{
     font-size: 1.5rem;
 }
 
+
 .home-content{
     margin: auto 10%;
     padding: 3% 0;
@@ -125,7 +126,7 @@ nav ul a:hover, nav ul li:hover{
     justify-content: center;
     align-items: center;
     max-height: 70%;
-    width: 70%;
+    width: 80%;
     border-radius: 40px;
     background-color: var(--green-highlight);
 }
@@ -404,4 +405,24 @@ footer {
    font-weight: 550;
    color: var(--blue-highlight);
    text-align: center;
+}
+
+
+/*Media adjustments*/
+
+@media screen and (max-width: 850px) {
+  #home h2{
+    font-size: 1rem;
+    }
+  #contact .home-content{
+    margin: 0 0% auto 0%;
+    width: 90%;
+  }
+  section{
+    padding-bottom: 3%;
+  }
+  nav ul a, nav ul li, #name {
+    font-size: 1.3rem;
+    padding: 0.2rem;
+    }
 }
