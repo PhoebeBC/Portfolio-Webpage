@@ -270,6 +270,14 @@ nav ul a:hover, nav ul li:hover{
 #experience a:visited {
     color: var(--green-primary)
 }
+.btn {
+  color: var(--green-dark);
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 5%;
+  background-color: var(--green-highlight);
+}
+
 /*title in projects section*/
 /*.summary in projects section*/
 /*.summary-description in projects section*/
@@ -329,7 +337,7 @@ nav ul a:hover, nav ul li:hover{
 }
 
 #message{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--gray-primary);
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -337,7 +345,7 @@ nav ul a:hover, nav ul li:hover{
     text-align: center;
 }
 #message span{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 #contact .summary{
