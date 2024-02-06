@@ -11,10 +11,10 @@
     --gray-primary: #3e4a35;
     --gray-dark: #131f0d;
         /*Blue*/
-    --blue-highlight: #bbebec;
+    --blue-highlight: #506495;
     --blue-light: #a0cfd0;
     --blue-primary: #1e4e4e;
-    --blue-dark: #002020;
+    --blue-dark: #2F323A;
     /*formatting*/
     --curve: 20px;
 }
@@ -44,11 +44,18 @@ p {
     text-wrap: balance;
 }
 
+a {
+    padding-bottom: 5%;
+    text-decoration-line: none;
+}
+
 section {
     display: flex; /*Displays divs nicely in each section*/
     flex-direction: column; /*Keeps section titles above boxes*/
     align-items: center; /*centers divs on the vertical axis*/
     height: 100vh;
+    max-height: 650px;
+    padding-top: 30px;
 }
 
 
@@ -63,7 +70,7 @@ nav {
     z-index: 10;
     padding-bottom: 5px; /*Keeps nave bar looking nice*/
     border-radius: 0px 0px var(--curve) var(--curve);
-    background-color: var(--blue-dark);
+    background-color: var(--blue-primary);
 }
 
 nav ul {
@@ -79,16 +86,21 @@ nav ul a, nav ul li, #name {
     font-size: 1.5rem;
     padding: 0.4rem;
     font-weight: 550;
-    color: var(--blue-highlight);
-    text-decoration-color: var(--blue-dark); /*Needs to be same as nav background*/
+    color: var(--white);
+    text-decoration-color: var(--blue-primary); /*Needs to be same as nav background*/
 }
 
+nav ul a:hover, nav ul li:hover{
+    text-decoration-line: underline;
+    text-decoration-color:  var(--white);
+}
 
 /*HOME*/
 
 #home{
     background-color: var(--green-dark);
     color: var(--white);
+    padding-top: 0;
 }
 
 #home h1{
@@ -174,7 +186,7 @@ nav ul a, nav ul li, #name {
     width: 100%;
     height: 100%;
     flex-direction: row; /*Aligns divs within this div to be side by side and not stacked*/
-     /*Ensures it fills the container so when aligning centrally it looks good*/
+    /*Ensures it fills the container so when aligning centrally it looks good*/
     /* margin: auto; */
 }
 
@@ -210,10 +222,17 @@ nav ul a, nav ul li, #name {
 }
 
 .summary-box a {
-    padding-bottom: 5%;
     color: var(--gray-dark);
 }
-
+.summary-box a:hover {
+    color: var(--blue-highlight);
+}/*
+.summary-box a:visited {
+    padding-bottom: 5%;
+    color: var(--gray-primary);
+    text-decoration-color: var(--gray-highlight);
+}
+*/
 
 /*EXPERIENCE*/
 
@@ -243,8 +262,13 @@ nav ul a, nav ul li, #name {
 }
 
 #experience a {
-    padding-bottom: 5%;
     color: var(--green-highlight);
+}
+#experience a:hover {
+    color: var(--green-highlight);
+}
+#experience a:visited {
+    color: var(--green-primary)
 }
 /*title in projects section*/
 /*.summary in projects section*/
@@ -280,7 +304,6 @@ nav ul a, nav ul li, #name {
 }
 
 #extras a {
-    padding-bottom: 5%;
     color: var(--gray-dark);
 }
 
@@ -295,20 +318,14 @@ nav ul a, nav ul li, #name {
 #contact h2 {
     color: var(--green-highlight);
     font-size: 2rem;
+
 }
 
 #contact .home-content{
-    margin: auto 10%;
-    padding: 3% 0;
-    position: relative;
-    top: 15px;
+    margin: 0 auto auto auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 70%;
-    width: 70%;
-    border-radius: 40px;
-    background-color: var(--green-highlight);
+    flex-direction: column;
+    max-height: 60%;
 }
 
 #message{
@@ -323,14 +340,46 @@ nav ul a, nav ul li, #name {
     font-size: 2rem;
 }
 
-#contact .about{
-    justify-content: space-between;
-    padding: 2%;
-    min-height: 100%;
+#contact .summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
 }
 
+.contact-icon img{
+    max-height: 100%;
+    width: 250px;
+    object-fit: cover;
+}
+.github-icon{
+    width: 300px;
+}
+
+#email-icon{
+    height: 130px;
+    width: 200px;
+    object-fit: cover;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+#email p{
+    padding-top: 0;
+    margin-top: 0;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+#contact .picture-text{
+    flex-direction: column;
+    gap: 0px;
+}
 
 /*Footer*/
+
 footer {
     display: flex; /*Keeps all items on singular line*/
     justify-content: end; /*Equally spaces out div elements in nave bar*/
@@ -338,6 +387,7 @@ footer {
     right: 0px;
     border-radius: var(--curve) var(--curve) 0px 0px;
     background-color: var(--blue-dark);
+    z-index: 10;
 }
 
 #reference {
