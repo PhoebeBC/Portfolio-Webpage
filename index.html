@@ -8,10 +8,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" media="screen and (min-height: 800px)" href="monitor.css">
 	<link rel="stylesheet" media="screen and (max-width: 450px)" href="mobile.css">
+	<script src="myscripts.js"></script>
 </head>
 <body>
   <!-- START NAV -->
-    <nav>
+    <nav id="nav">
 		<div id="name">
 			Phoebe Badcock
 		</div>
@@ -38,6 +39,10 @@
 				</li>
 		    </ul>
 		</div>
+		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  		<a href="javascript:void(0);" id="menu-icon" onclick="menuFunction()">
+    	<i class="fa fa-bars" id="burger"></i>
+  </a>
     </nav>
   <!-- END NAV -->
   <!-- START HOME SECTION -->
@@ -295,8 +300,11 @@
 					</a>
 				</div>
 				<div class="picture-text" id="email">
-					<img src="/Images/email-icon.png" alt="Email Icon" id="email-icon">
-					<p>phoebe.badcock<br>@mail.com</p>
+					<a href="javascript:void(0);" id="email-link">
+						<img src="/Images/email-icon.png" alt="Email Icon" id="email-icon">
+					</a>
+					<p id="email-copy">phoebe.badcock<br>@mail.com</p>
+					<button id="copy-button" onclick="copyFunction()">Copy Email</button>
 			  </div>
 			</div>
 		</div>

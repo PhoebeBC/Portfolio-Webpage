@@ -72,6 +72,9 @@ nav {
     border-radius: 0px 0px var(--curve) var(--curve);
     background-color: var(--blue-primary);
 }
+nav #menu-icon{
+    display: none;
+}
 
 nav ul {
     margin: 0;/*keeps nave bar dimensions to nav bar id*/
@@ -382,6 +385,17 @@ nav ul a:hover, nav ul li:hover{
     font-weight: 600;
     text-align: center;
 }
+    /* Hide the button next to email */
+#copy-button{
+    display: none;
+    z-index: 10;
+}
+#email-link:hover{
+    #copy-button{
+        display: block;
+        z-index: 10;
+    }
+}
 #contact .picture-text{
     flex-direction: column;
     gap: 0px;
@@ -456,6 +470,41 @@ footer {
     height: 300vh;
     min-block-size: auto;
   }
+  /* Style the navigation menu */
+  nav {
+      overflow: hidden;
+      flex-direction: column;
+      position: fixed;
+      border-radius: 0px 0px var(--curve) var(--curve);
+    }
+    nav ul li {
+    float: none;
+    }
+    /* Hide the links inside the navigation menu (except for logo/home) */
+  nav #nav-list, nav #nav-contact {
+      display: none;
+    }
+  nav #name{
+      padding-left: 5%;
+    }
+    /* Style navigation menu links */
+  nav a {
+      display: block;
+    }
+    /* Style the hamburger menu */
+  nav #menu-icon {
+    background: white;
+    display: flex;
+    position: absolute;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    }
+  #burger {
+    font-size: xx-large;
+    color: var(--blue-primary);
+    }
   #home, #contact {
     height: 100vh;
   }
