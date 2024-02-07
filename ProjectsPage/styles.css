@@ -84,8 +84,11 @@ nav ul li{
   display: block; /*Removes bullet points*/
   float: left; /*Keeps list horizontal*/
 }
+#name {
+    padding-top: 0.4rem;
+}
 
-nav ul a, nav ul li, #name {
+nav div a, nav ul li {
     font-size: 1.5rem;
     padding: 0.4rem;
     font-weight: 550;
@@ -97,76 +100,18 @@ nav ul a:hover, nav ul li:hover{
     text-decoration-line: underline;
     text-decoration-color:  var(--white);
 }
+/*current*/
 
-/*HOME*/
-
-#home{
-    background-color: var(--green-dark);
-    color: var(--white);
-    padding-top: 0;
-}
-
-#home h1{
-    font-size: 2.5rem;
-    color: var(--gray-primary);
-}
-
-#home p{
-    font-size: 0.5rem;
-}
-
-#home h2{
-    font-size: 1.5rem;
-}
-
-
-.home-content{
-    margin: auto 10%;
-    padding: 3% 0;
-    position: relative;
-    top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 70%;
-    width: 80%;
-    border-radius: 40px;
-    background-color: var(--green-highlight);
-}
-
-#headshot {
-    height: -webkit-fill-available;
-    padding: 0 3%;
-}
-
-.about{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0 3%;
-}
-
-.picture-text { /*for the location icon and location*/
-    display: flex;
-    flex-direction: row;
-    /*justify-content: left;*/
-    align-items: center; /*Alights elements on centre of vertical axis*/
-    gap: 6px; /*Gap between icon and text*/
-}
-
-
-/*PROJECTS*/
-
-#projects{
+#current{
      background-color: var(--gray-primary);
      color: var(--gray-light);
 }
 
-#projects h2 {
+#current h2 {
     color: var(--gray-light);
     font-size: 2rem;
 }
-#projects h3 {
+#current h3 {
     color: var(--gray-dark);
     font-size: 1.5rem;
     display: flex;
@@ -238,19 +183,19 @@ nav ul a:hover, nav ul li:hover{
 }
 */
 
-/*EXPERIENCE*/
+/*complete*/
 
-#experience{
+#complete{
      background-color: var(--green-highlight);
      color: var(--green-dark);
 }
 
-#experience h2 {
+#complete h2 {
     color: var(--green-dark);
     font-size: 2rem;
 }
 
-#experience h3 {
+#complete h3 {
     color: var(--green-highlight);
     font-size: 1.5rem;
     display: flex;
@@ -260,47 +205,40 @@ nav ul a:hover, nav ul li:hover{
 }
 
 /*box div*/
-#experience .summary-box {
+#complete .summary-box {
     color: var(--green-highlight);
     background-color: var(--green-dark);
 }
 
-#experience a {
+#complete a {
     color: var(--green-highlight);
 }
-#experience a:hover {
+#complete a:hover {
     color: var(--green-highlight);
 }
-#experience a:visited {
+#complete a:visited {
     color: var(--green-primary)
 }
-.btn {
-  color: var(--green-dark);
-  height: 50px;
-  font-size: 20px;
-  margin-bottom: 5%;
-  background-color: var(--green-highlight);
-}
 
-/*title in projects section*/
-/*.summary in projects section*/
-/*.summary-description in projects section*/
-/*.summary-description li in projects section*/
+/*title in current section*/
+/*.summary in current section*/
+/*.summary-description in current section*/
+/*.summary-description li in current section*/
 
 
-/*EXTRAS*/
+/*coming-soon*/
 
-#extras{
+#coming-soon{
      background-color: var(--gray-dark);
      color: var(--gray-highlight);
 }
 
-#extras h2 {
+#coming-soon h2 {
     color: var(--gray-highlight);
     font-size: 2rem;
 }
 
-#extras h3 {
+#coming-soon h3 {
     color: var(--gray-dark);
     font-size: 1.5rem;
     display: flex;
@@ -310,96 +248,15 @@ nav ul a:hover, nav ul li:hover{
 }
 
 /*box div*/
-#extras .summary-box {
+#coming-soon .summary-box {
     color: varvar(--gray-dark);
     background-color: var(--gray-highlight);
 }
 
-#extras a {
+#coming-soon a {
     color: var(--gray-dark);
 }
 
-
-/*CONTACT*/
-
-#contact{
-    background-color: var(--green-dark);
-    color: var(--white);
-}
-
-#contact h2 {
-    color: var(--green-highlight);
-    font-size: 2rem;
-
-}
-
-#contact .home-content{
-    margin: 0 auto auto auto;
-    display: flex;
-    flex-direction: column;
-    max-height: 60%;
-}
-
-#message{
-    font-size: 2rem;
-    color: var(--gray-primary);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    margin: 2%;
-    text-align: center;
-}
-#message span{
-    font-size: 2.5rem;
-}
-
-#contact .summary{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-}
-
-.contact-icon img{
-    max-height: 100%;
-    width: 250px;
-    object-fit: cover;
-}
-.github-icon{
-    width: 300px;
-}
-
-#email-icon{
-    height: 130px;
-    width: 200px;
-    object-fit: cover;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-#email p{
-    padding-top: 0;
-    margin-top: 0;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-}
-    /* Hide the button next to email */
-#copy-button{
-    display: none;
-    z-index: 10;
-}
-#email-link:hover{
-    #copy-button{
-        display: block;
-        z-index: 10;
-    }
-}
-#contact .picture-text{
-    flex-direction: column;
-    gap: 0px;
-}
 
 /*Footer*/
 
@@ -425,13 +282,7 @@ footer {
 /*Media adjustments*/
 
 @media screen and (max-width: 850px) {
-  #home h2{
-    font-size: 1rem;
-    }
-  #contact .home-content{
-    margin: 0 0% auto 0%;
-    width: 90%;
-  }
+
   section{
     padding-bottom: 3%;
   }
@@ -442,12 +293,6 @@ footer {
 }
 
 @media screen and (min-width: 1500px) {
-  #home h2{
-    font-size: 2rem;
-    }
-  .home-content{
-    width: 60%;
-  }
   section{
     padding: 7.5%;
     justify-content: space-between;
@@ -481,7 +326,7 @@ footer {
     float: none;
     }
     /* Hide the links inside the navigation menu (except for logo/home) */
-  nav #nav-list, nav #nav-contact {
+  nav #nav-list, nav #nav-section {
       display: none;
     }
   nav #name{
@@ -505,24 +350,9 @@ footer {
     font-size: xx-large;
     color: var(--blue-primary);
     }
-  #home, #contact {
-    height: 100vh;
-  }
-  #projects{
+  #current{
     max-height: 1400px;
   }
-  #home h2{
-    font-size: 1rem;
-    }
-  .home-content{
-    justify-content: space-evenly;
-    padding: 5% 0 8% 0;
-    flex-direction: column;
-    min-block-size: auto;
-  }
-  #headshot {
-    height: 45%;
-    }
   .summary{
     flex-direction: column;
     }
@@ -530,30 +360,4 @@ footer {
     min-block-size: auto;
     justify-content: center;
     }
-  #contact .summary{
-    flex-direction: column;
-  }
-  .contact-icon img{
-    max-height: 100%;
-    width: 100px;
-    object-fit: cover;
-}
-  #email-icon{
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    }
-  #email p{
-    padding-top: 0;
-    margin-top: 0;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    }
-  #contact .home-content {
-    max-height: 80%;
-  }
 }
