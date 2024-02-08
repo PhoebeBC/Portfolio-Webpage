@@ -45,7 +45,7 @@ p {
 }
 
 a {
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     text-decoration-line: none;
 }
 
@@ -85,7 +85,7 @@ nav ul li{
   float: left; /*Keeps list horizontal*/
 }
 
-nav ul a, nav ul li, #name {
+nav ul a, nav ul li, #name, nav div a{
     font-size: 1.5rem;
     padding: 0.4rem;
     font-weight: 550;
@@ -157,16 +157,16 @@ nav ul a:hover, nav ul li:hover{
 
 /*PROJECTS*/
 
-#projects{
+#projects, #current{
      background-color: var(--gray-primary);
      color: var(--gray-light);
 }
 
-#projects h2 {
+#projects h2 , #current h2{
     color: var(--gray-light);
     font-size: 2rem;
 }
-#projects h3 {
+#projects h3, #current h3 {
     color: var(--gray-dark);
     font-size: 1.5rem;
     display: flex;
@@ -188,7 +188,6 @@ nav ul a:hover, nav ul li:hover{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
     flex-direction: row; /*Aligns divs within this div to be side by side and not stacked*/
     /*Ensures it fills the container so when aligning centrally it looks good*/
     /* margin: auto; */
@@ -197,7 +196,7 @@ nav ul a:hover, nav ul li:hover{
 /*box div*/
 .summary-box {
     margin: 0 20px 5%;
-    padding: 0 2%;
+    padding: 0 2% 1%;
     display: flex;
     min-block-size: -webkit-fill-available;
     width: 100%;
@@ -240,17 +239,17 @@ nav ul a:hover, nav ul li:hover{
 
 /*EXPERIENCE*/
 
-#experience{
+#experience, #complete{
      background-color: var(--green-highlight);
      color: var(--green-dark);
 }
 
-#experience h2 {
+#experience h2, #complete h2{
     color: var(--green-dark);
     font-size: 2rem;
 }
 
-#experience h3 {
+#experience h3 , #complete h3 {
     color: var(--green-highlight);
     font-size: 1.5rem;
     display: flex;
@@ -260,15 +259,15 @@ nav ul a:hover, nav ul li:hover{
 }
 
 /*box div*/
-#experience .summary-box {
+#experience .summary-box, #complete .summary-box {
     color: var(--green-highlight);
     background-color: var(--green-dark);
 }
 
-#experience a {
+#experience a, #complete a {
     color: var(--green-highlight);
 }
-#experience a:hover {
+#experience a:hover, #complete a:hover {
     color: var(--green-highlight);
 }
 #experience a:visited {
@@ -556,4 +555,192 @@ footer {
   #contact .home-content {
     max-height: 80%;
   }
+}
+/***********************************************************************************************************/
+
+#name {
+    padding-top: 0.4rem;
+}
+
+/*current*/
+/*1st Div for box which includes header*/
+#projects-page .summary {
+    padding: 3% 0;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#projects-page .summary-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: none;
+    max-width: none;
+}
+#projects-page .summary-description {
+   display: flex;
+   flex-direction: column;
+}
+#projects-page .summary-description li{
+  flex: 1 0 auto;
+}
+
+/*complete*/
+
+#complete{
+     background-color: var(--green-highlight);
+     color: var(--green-dark);
+}
+
+#complete h2 {
+    color: var(--green-dark);
+    font-size: 2rem;
+}
+
+#complete h3 {
+    color: var(--green-highlight);
+    font-size: 1.5rem;
+    display: flex;
+    padding: 5% 0;
+    margin: auto;
+    text-align: center;
+}
+
+/*box div*/
+#complete .summary-box {
+    color: var(--green-highlight);
+    background-color: var(--green-dark);
+}
+
+#complete a {
+    color: var(--green-highlight);
+}
+#complete a:hover {
+    color: var(--green-highlight);
+}
+#complete a:visited {
+    color: var(--green-primary)
+}
+
+/*title in current section*/
+/*.summary in current section*/
+/*.summary-description in current section*/
+/*.summary-description li in current section*/
+
+
+/*coming-soon*/
+
+#coming-soon{
+     background-color: var(--gray-dark);
+     color: var(--gray-highlight);
+}
+
+#coming-soon h2 {
+    color: var(--gray-highlight);
+    font-size: 2rem;
+}
+
+#coming-soon h3 {
+    color: var(--gray-dark);
+    font-size: 1.5rem;
+    display: flex;
+    padding: 5% 0;
+    margin: auto;
+    text-align: center;
+}
+
+/*box div*/
+#coming-soon .summary-box {
+    color: varvar(--gray-dark);
+    background-color: var(--gray-highlight);
+}
+
+#coming-soon a {
+    color: var(--gray-dark);
+}
+
+/*Media adjustments*/
+
+@media screen and (max-width: 850px) {
+
+  section{
+    padding-bottom: 3%;
+  }
+  #nav-vm ul a, #nav-vm ul li, #name {
+    font-size: 1.3rem;
+    padding: 0.2rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+  section{
+    padding: 7.5%;
+    justify-content: space-between;
+    gap: 15%;
+    }
+  .title {
+    margin-top: 0;
+    }
+  .summary {
+    justify-content: space-evenly;
+    }
+  .summary-box {
+    justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  section{
+    max-height: 1600px;
+    height: 300vh;
+    min-block-size: auto;
+  }
+  /* Style the navigation menu */
+  #nav-vm {
+      overflow: hidden;
+      flex-direction: column;
+      position: fixed;
+      border-radius: 0px 0px var(--curve) var(--curve);
+    }
+    #nav-vm ul li {
+    float: none;
+    }
+    /* Hide the links inside the navigation menu (except for logo/home) */
+  #nav-vm #nav-list, #nav-vm #nav-section {
+      display: none;
+    }
+  #nav-vm #name{
+      padding-left: 5%;
+    }
+    /* Style navigation menu links */
+  #nav-vm a {
+      display: block;
+    }
+    /* Style the hamburger menu */
+  #nav-vm #menu-icon {
+    background: white;
+    display: flex;
+    position: absolute;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    }
+  #burger {
+    font-size: xx-large;
+    color: var(--blue-primary);
+    }
+  #current{
+    max-height: 1400px;
+  }
+  .summary{
+    flex-direction: column;
+    }
+  .summary-box {
+    min-block-size: auto;
+    justify-content: center;
+    }
 }

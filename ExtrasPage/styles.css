@@ -1,26 +1,41 @@
+/*
 :root {
     --white: #f1f1ea;
-    /*Greens*/
-    --green-highlight: #B9CAAD; /*#b8f397;*/
+    */
+/*Greens*//*
+
+    --green-highlight: #B9CAAD; */
+/*#b8f397;*//*
+
     --green-light: #9dd67d;
     --green-primary: #205106;
-    --green-dark: #232E21;  /*#072100;*/
-        /*Gray*/
+    --green-dark: #232E21;  */
+/*#072100;*//*
+
+        */
+/*Gray*//*
+
     --gray-highlight: #d9e7cb;
     --gray-light: #bdcbb0;
     --gray-primary: #3e4a35;
     --gray-dark: #131f0d;
-        /*Blue*/
+        */
+/*Blue*//*
+
     --blue-highlight: #506495;
     --blue-light: #a0cfd0;
     --blue-primary: #1e4e4e;
     --blue-dark: #2F323A;
-    /*formatting*/
+    */
+/*formatting*//*
+
     --curve: 20px;
 }
 
 
-/*ELEMENTS*/
+*/
+/*ELEMENTS*//*
+
 body {
     background-color: var(--green-dark);
     font-family: 'Poppins', sans-serif;
@@ -50,25 +65,41 @@ a {
 }
 
 section {
-    display: flex; /*Displays divs nicely in each section*/
-    flex-direction: column; /*Keeps section titles above boxes*/
-    align-items: center; /*centers divs on the vertical axis*/
+    display: flex; */
+/*Displays divs nicely in each section*//*
+
+    flex-direction: column; */
+/*Keeps section titles above boxes*//*
+
+    align-items: center; */
+/*centers divs on the vertical axis*//*
+
     height: 100vh;
     max-height: 650px;
     padding-top: 30px;
 }
 
 
-/*Navigation bar*/
+*/
+/*Navigation bar*//*
+
 
 nav {
-    display: flex; /*Keeps all items on singular line*/
-    justify-content: space-between; /*Equally spaces out div elements in nave bar*/
-    position: fixed; /*Mean nav bar will always be visible even when scrolling*/
+    display: flex; */
+/*Keeps all items on singular line*//*
+
+    justify-content: space-between; */
+/*Equally spaces out div elements in nave bar*//*
+
+    position: fixed; */
+/*Mean nav bar will always be visible even when scrolling*//*
+
     left: 0px;
     right: 0px;
     z-index: 10;
-    padding-bottom: 5px; /*Keeps nave bar looking nice*/
+    padding-bottom: 5px; */
+/*Keeps nave bar looking nice*//*
+
     border-radius: 0px 0px var(--curve) var(--curve);
     background-color: var(--blue-primary);
 }
@@ -77,12 +108,18 @@ nav #menu-icon{
 }
 
 nav ul {
-    margin: 0;/*keeps nave bar dimensions to nav bar id*/
+    margin: 0;*/
+/*keeps nave bar dimensions to nav bar id*//*
+
 }
 
 nav ul li{
-  display: block; /*Removes bullet points*/
-  float: left; /*Keeps list horizontal*/
+  display: block; */
+/*Removes bullet points*//*
+
+  float: left; */
+/*Keeps list horizontal*//*
+
 }
 #name {
     padding-top: 0.4rem;
@@ -93,14 +130,18 @@ nav div a, nav ul li {
     padding: 0.4rem;
     font-weight: 550;
     color: var(--white);
-    text-decoration-color: var(--blue-primary); /*Needs to be same as nav background*/
+    text-decoration-color: var(--blue-primary); */
+/*Needs to be same as nav background*//*
+
 }
 
 nav ul a:hover, nav ul li:hover{
     text-decoration-line: underline;
     text-decoration-color:  var(--white);
 }
-/*interests*/
+*/
+/*interests*//*
+
 
 #interests{
      background-color: var(--gray-primary);
@@ -120,26 +161,42 @@ nav ul a:hover, nav ul li:hover{
     text-align: center;
 }
 
-/*Section titles for each section*/
+*/
+/*Section titles for each section*//*
+
 .title {
     margin: 2%;
 }
 
-/*1st Div for box which includes header*/
+*/
+/*1st Div for box which includes header*//*
+
 .summary {
-    /* position: relative; */
-    /* top: 15px; */
+    */
+/* position: relative; *//*
+
+    */
+/* top: 15px; *//*
+
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    flex-direction: row; /*Aligns divs within this div to be side by side and not stacked*/
-    /*Ensures it fills the container so when aligning centrally it looks good*/
-    /* margin: auto; */
+    flex-direction: row; */
+/*Aligns divs within this div to be side by side and not stacked*//*
+
+    */
+/*Ensures it fills the container so when aligning centrally it looks good*//*
+
+    */
+/* margin: auto; *//*
+
 }
 
-/*box div*/
+*/
+/*box div*//*
+
 .summary-box {
     margin: 0 20px 5%;
     padding: 0 2%;
@@ -156,7 +213,9 @@ nav ul a:hover, nav ul li:hover{
     border-radius: var(--curve);
 }
 
-/*box content excluding button*/
+*/
+/*box content excluding button*//*
+
 .summary-description {
     margin: 0%;
     padding: 0;
@@ -171,7 +230,9 @@ nav ul a:hover, nav ul li:hover{
 }
 
 
-/*courses*/
+*/
+/*courses*//*
+
 
 #courses{
      background-color: var(--green-highlight);
@@ -192,20 +253,32 @@ nav ul a:hover, nav ul li:hover{
     text-align: center;
 }
 
-/*box div*/
+*/
+/*box div*//*
+
 #courses .summary-box {
     color: var(--green-highlight);
     background-color: var(--green-dark);
 }
 
 
-/*title in interests section*/
-/*.summary in interests section*/
-/*.summary-description in interests section*/
-/*.summary-description li in interests section*/
+*/
+/*title in interests section*//*
+
+*/
+/*.summary in interests section*//*
+
+*/
+/*.summary-description in interests section*//*
+
+*/
+/*.summary-description li in interests section*//*
 
 
-/*hobbies*/
+
+*/
+/*hobbies*//*
+
 
 #hobbies{
      background-color: var(--gray-dark);
@@ -226,18 +299,26 @@ nav ul a:hover, nav ul li:hover{
     text-align: center;
 }
 
-/*box div*/
+*/
+/*box div*//*
+
 #hobbies .summary-box {
     color: varvar(--gray-dark);
     background-color: var(--gray-highlight);
 }
 
 
-/*Footer*/
+*/
+/*Footer*//*
+
 
 footer {
-    display: flex; /*Keeps all items on singular line*/
-    justify-content: end; /*Equally spaces out div elements in nave bar*/
+    display: flex; */
+/*Keeps all items on singular line*//*
+
+    justify-content: end; */
+/*Equally spaces out div elements in nave bar*//*
+
     left: 0px;
     right: 0px;
     border-radius: var(--curve) var(--curve) 0px 0px;
@@ -254,7 +335,9 @@ footer {
 }
 
 
-/*Media adjustments*/
+*/
+/*Media adjustments*//*
+
 
 @media screen and (max-width: 850px) {
 
@@ -290,7 +373,9 @@ footer {
     height: 300vh;
     min-block-size: auto;
   }
-  /* Style the navigation menu */
+  */
+/* Style the navigation menu *//*
+
   nav {
       overflow: hidden;
       flex-direction: column;
@@ -300,18 +385,24 @@ footer {
     nav ul li {
     float: none;
     }
-    /* Hide the links inside the navigation menu (except for logo/home) */
+    */
+/* Hide the links inside the navigation menu (except for logo/home) *//*
+
   nav #nav-list, nav #nav-section {
       display: none;
     }
   nav #name{
       padding-left: 5%;
     }
-    /* Style navigation menu links */
+    */
+/* Style navigation menu links *//*
+
   nav a {
       display: block;
     }
-    /* Style the hamburger menu */
+    */
+/* Style the hamburger menu *//*
+
   nav #menu-icon {
     background: white;
     display: flex;
@@ -335,4 +426,4 @@ footer {
     min-block-size: auto;
     justify-content: center;
     }
-}
+}*/

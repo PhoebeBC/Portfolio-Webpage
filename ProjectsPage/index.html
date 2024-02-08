@@ -4,14 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Phoebe Badcock Projects</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
+	<script src="../myscripts.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" media="screen and (min-height: 800px)" href="monitor.css">
-	<link rel="stylesheet" media="screen and (max-width: 450px)" href="mobile.css">
 </head>
-<body>
+<body id="projects-page">
   <!-- START NAV -->
-    <nav id="nav">
+    <nav>
 		<div id="name">
 			<a href="../index.html">Phoebe Badcock</a>
 		</div>
@@ -28,7 +27,7 @@
 				</li>
 		    </ul>
 		</div>
-		<div id="nav-section">
+		<div id="nav-contact">
 			<ul>
 				<li>
 				  Projects
@@ -49,28 +48,45 @@
 					<div class="summary-description">
 						<h3>Portfolio Website</h3>
 						<ul>
-							<li>A live website that anyone can visit containing my new career projects and anything
-								you would normally find on a CV.</li>
-							<li>HTML, CSS, GitHub</li>
-							<li>A phone orientated website that allows players to see matches, set availability and
-								view results.</li>
-							<li>Python, Django, Database Management</li>
+							<li>HTML, CSS, JavaScript, GitHub, GitPages</li>
+							<li>Showcasing relevant	information for potential collaborations or employment
+								opportunities. I acquired my skills by completing sections of a course and studying
+								the structures of other	personal websites, without following a step-by-step tutorial.
+							</li>
+							<li>
+								When encountering challenges, I researched online for solutions and employed them
+								successfully. Creating a colour scheme posed a challenge, as aesthetic design is
+								completely new for me. The most	enjoyable part was crafting interactive elements to
+								liven up the website.
+							</li>
+							<li>Prior to deployment, I ensured the design worked well on various screen sizes and had a
+								friend in software review my code for cleanliness and accuracy.
+							</li>
 						</ul>
 					</div>
-					<a href="" target="_blank">View More</a>
+					<a href="https://github.com/PhoebeBC/Portfolio-Webpage" target="_blank">View More on GitHub</a>
 				</div>
 				<div class="summary-box">
 					<div class="summary-description">
 						<h3>Storm Website</h3>
 						<ul>
-							<li>Allows user to write out a code that will then be encrypted or user gives code to be
-								decrypted.</li>
-							<li>Python, Object Orientated Programming</li>
-							<li>A log of the leet code problems I have solved to practice coding.</li>
-							<li>Python, Algorithms, Problem-Solving</li>
+							<li>React, Python, Django, AWS, Database Management</li>
+							<li>I play for the Storm summer league mixed hockey team, where match details and player
+								availability are currently managed through multiple Google Sheets. Recognizing the
+								opportunity to enhance our system, I am developing a fully functional website to
+								learn full-stack development.
+							</li>
+							<li>Collaborating with a teammate who specializes in
+								front-end development, we will work closely with the Storm team captains and
+								organizers to ensure the website meets all necessary requirements.
+							</li>
+							<li>The website
+								will be optimized for mobile devices, and the initial release will enable players
+								to log in, access match details, and indicate their availability for specific matches.
+							</li>
 						</ul>
 					</div>
-					<a href="" target="_blank">View More</a>
+					<a href="" target="_blank">View More on GitHub</a>
 				</div>
 		</div>
     </section>
@@ -81,47 +97,54 @@
 		    <div class="summary">
 				<div class="summary-box">
 					<div class="summary-description">
-						<h3>Credit Analyst</h3>
+						<h3>Ceaser Cypher</h3>
 						<ul>
-							<li>Streamlined the review process, cutting time per review from over 2 hours to under
-								30 seconds.</li>
-							<li>Handled updates and documented changes to the process.</li>
-							<li>Effectively oversaw credit file reporting to credit bureaus, fostering strong
-								relationships through clear communication.</li>
-							<li>Implemented SFTP connections for confidential customer information sharing.</li>
+							<li>I developed a script capable of encrypting a message from a text file using a
+								Caesar cipher and generating another text file with the encrypted message.
+							</li>
+							<li>Subsequently, I enhanced the complexity of the encryption process. Rather than all
+								characters sharing the same shift, each succeeding character experienced a shift
+								of n+1, where n represents the shift of the preceding character.
+							</li>
+							<li>Lastly, to maintain
+								code efficiency, I implemented the reverse encryption using the same function by
+								modifying a single parameter.
+							</li>
 						</ul>
 					</div>
-					<a href="" target="_blank">View More</a>
+					<a href="" target="_blank">View More on GitHub</a>
 				</div>
 				<div class="summary-box">
 					<div class="summary-description">
-					<h3>Senior Analyst</h3>
+					<h3>Server Client Chat</h3>
 							<ul>
-								<li>Used Flask, APIs and Python backend for interactive, customizable diagrams, graphs,
-									and metrics.</li>
-								<li>Analyzed data by embedding SQL queries in the backend, accessing the database.</li>
-								<li>Researched Selenium and used its capabilities to fully automate testing through
-									customer application website.</li>
-								<li>This allowed for more rigorous testing resulting in fewer errors upon release. </li>
+								<li>Implemented a class to establish a socket connection on both the client and
+									server sides, enabling seamless message exchange via TCP between the two once the
+									code is executed.
+								</li>
+								<li>
+									This project improved my understanding of ports, IP addresses,
+									sockets and endpoints.
+								</li>
 							</ul>
 					</div>
-					<a href="" target="_blank">View More</a>
+					<a href="https://github.com/PhoebeBC/ClientServerChat" target="_blank">View More on GitHub</a>
 				</div>
 				<div class="summary-box">
 					<div class="summary-description">
-					<h3>Senior Analyst</h3>
+					<h3>Leet Code</h3>
 							<ul>
-								<li>Used Flask, APIs and Python backend for interactive, customizable diagrams, graphs,
-									and metrics.</li>
-								<li>Analyzed data by embedding SQL queries in the backend, accessing the database.</li>
-								<li>Researched Selenium and used its capabilities to fully automate testing through
-									customer application website.</li>
-								<li>This allowed for more rigorous testing resulting in fewer errors upon release. </li>
+								<li>Engaging in LeetCode problems of varying difficulty levels has helped to
+									sharpen my coding skills and deepen my understanding of algorithms, enabling
+									the enhancing of my code efficiency. </li>
+								<li>This ongoing commitment serves as a
+									continuous effort to refine my coding proficiency,
+									and I intend to extend this practice to any new language I undertake.</li>
 							</ul>
 					</div>
-					<a href="" target="_blank">View More</a>
+					<a href="https://github.com/PhoebeBC/leetcodeTop150" target="_blank">View More on GitHub</a>
 				</div>
-				<div class="summary-box">
+				<!--<div class="summary-box">
 					<div class="summary-description">
 						<h3>Key Skills & CV</h3>
 						<ul>
@@ -141,8 +164,8 @@
 							<li>Multitasking</li>
 						</ul>
 					</div>
-					<a href="" target="_blank">View More</a>
-				</div>
+					<a href="" target="_blank">View More on GitHub</a>
+				</div>-->
 		</div>
     </section>
   <!-- END Complete SECTION -->
@@ -152,27 +175,34 @@
 		    <div class="summary">
 				<div class="summary-box">
 					<div class="summary-description">
-					<h3>Interests</h3>
+					<h3>Recipie Book App</h3>
 							<ul>
-								<li>Would like to learn more about algorithms and how to apply them to decrease
-									run times making code more efficient.</li>
-								<li>With a solid mathematics background from university,
-									I'm eager to explore applying it to enhance my software skills in niche areas.</li>
-								<li>I enjoy studying techniques in network security and cryptography,
-									specifically encryption and decryption methods.</li>
+								<li>React native, Python, Database Management, Swift/Kotlin</li>
+								<li>The application facilitates users in capturing images of recipes, extracting
+									and storing their contents within the app. Users can enhance organization by
+									adding tags, such as: Starter, Meat dish, Under 15 minutes, Meal Prep,
+									thereby simplifying the retrieval of recipes.
+								</li>
+								<li>Subsequent releases are
+									anticipated to introduce features enabling users to search for recipes
+									based on available kitchen ingredients and generate shopping lists corresponding
+									to their selected meals.
+								</li>
 							</ul>
 					</div>
 				</div>
 				<div class="summary-box">
 					<div class="summary-description">
-					<h3>Courses</h3>
+					<h3>Streaming Service Country Locator</h3>
 							<ul>
-								<li>Basics including types, if statements, loops and functions, Objects and
-									Classes. </li>
-								<li>Data structures, error handling, Modules and libraries.</li>
-								<li>HTML and CSS basics to intermediate. Utilised learnings to build this website.</li>
-								<li>Javascript basics along with regular expressions.</li>
-								<li>Functional and Object Orientated Programming.</li>
+								<li>Python, APIs</li>
+								<li>The proposed product aims to provide users with the capability to search
+									for any film or series available across various streaming services and countries.
+								</li>
+								<li>In instances where the desired content is unavailable on the UK service
+									but accessible on the Australian service, users can leverage a VPN to access
+									and stream the show.
+								</li>
 							</ul>
 					</div>
 				</div>
