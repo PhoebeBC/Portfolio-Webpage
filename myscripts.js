@@ -1,16 +1,25 @@
+function showCopyButton() {
+  var copyInfo = document.getElementById("copy-info");
+  copyInfo.style.display = "block";
+
+}
+
+function hideCopyButton() {
+  var copyInfo = document.getElementById("copy-info");
+  copyInfo.style.display = "none";
+  copyInfo.innerText = "Click to copy Email";
+
+}
+
 function copyFunction() {
   // Get the text field
   var copyText = document.getElementById("email-copy");
 
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
    // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
+  navigator.clipboard.writeText(copyText.textContent);
 
-  // Alert the copied text
-  alert("Copied the email: " + copyText.value);
+  var copyInfo = document.getElementById("copy-info");
+  copyInfo.innerText = "Copied";
 }
 
 

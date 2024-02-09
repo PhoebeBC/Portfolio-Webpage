@@ -49,7 +49,7 @@ p {
 }
 
 a {
-    padding-bottom: 3%;
+    /* padding-bottom: 3%; */
     text-decoration-line: none;
 }
 
@@ -68,7 +68,7 @@ section {
 nav {
     display: flex; /*Keeps all items on singular line*/
      /*Equally spaces out div elements in nave bar*/
-    justify-content: center;
+    justify-content: space-between;
     position: fixed; /*Mean nav bar will always be visible even when scrolling*/
     left: 0px;
     right: 0px;
@@ -82,11 +82,14 @@ nav #menu-icon{
 }
 
 nav ul {
-    margin: 0;/*keeps nave bar dimensions to nav bar id*/
+    /*keeps nave bar dimensions to nav bar id*/
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li{
-  display: block; /*Removes bullet points*/
+   /*Removes bullet points*/
   float: left; /*Keeps list horizontal*/
 }
 
@@ -95,7 +98,8 @@ nav ul a, nav ul li, #name, #nav-contact, nav div a{
     padding: 0.6rem 0.4rem;
     font-weight: 550;
     color: var(--white);
-    text-decoration-color: var(--blue-primary); /*Needs to be same as nav background*/
+
+     /*Needs to be same as nav background*/
 }
 
 nav ul a:hover, nav ul li:hover, nav div a:hover{
@@ -103,7 +107,13 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
     text-decoration-color:  var(--white);
 }
 
-#name, #nav-contact
+#name, #nav-contact {
+     width: 210px;
+}
+
+#nav-contact {
+    text-align: right;
+}
 
 /*HOME*/
 
@@ -159,7 +169,7 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
 .picture-text { /*for the location icon and location*/
     display: flex;
     flex-direction: row;
-    /*justify-content: left;*/
+    justify-content: left;
     align-items: center; /*Alights elements on centre of vertical axis*/
     gap: 6px; /*Gap between icon and text*/
 }
@@ -193,7 +203,7 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
 
 /*1st Div for box which includes header*/
 .summary {
-    /* position: relative; */
+    position: relative;
     /* top: 15px; */
     display: flex;
     align-items: center;
@@ -201,7 +211,7 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
     width: 100%;
     flex-direction: row; /*Aligns divs within this div to be side by side and not stacked*/
     /*Ensures it fills the container so when aligning centrally it looks good*/
-    /* margin: auto; */
+    margin: auto;
 }
 
 /*box div*/
@@ -290,10 +300,12 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
     font-size: 2rem;
 }
 #contact .home-content{
-    margin: 0 auto auto auto;
+    /* margin: 0 auto auto auto; */
     display: flex;
     flex-direction: column;
     max-height: 60%;
+    /* margin-bottom: 120px; */
+    /* flex: auto; */
 }
 #message{
     font-size: 2rem;
@@ -302,46 +314,43 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
     font-weight: 600;
     margin: 2%;
     text-align: center;
+    /* max-height: 33%; */
 }
-#message span{
-    font-size: 2.5rem;
-}
+#message span{font-size: 3rem;}
 #contact .summary{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    height: 100%;
-    flex-direction: row;
+    max-height: 75%;
+    /* height: 50%; */
+    /* max-height: -webkit-fill-available; */
+    /* flex-direction: row; */
+    /* flex-grow: 0; */
 }
 .contact-icon img{
     max-height: 100%;
-    width: 250px;
-    object-fit: cover;
+    max-width: 100%;
 }
 .github-icon{
     width: 300px;
 }
 #email-icon{
-    height: 130px;
-    width: 200px;
-    object-fit: cover;
+    /* height: 130px; */
+    /* width: 200px; */
+    /* object-fit: cover; */
     padding-bottom: 0;
     margin-bottom: 0;
 }
-#email p{
+#email-copy{
     padding-top: 0;
     margin-top: 0;
     color: black;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     font-weight: 600;
     text-align: center;
 }
-    /* Hide the button next to email */
-#copy-button{
-    display: none;
-    z-index: 10;
-}
+
 #email-link:hover{
     #copy-button{
         display: block;
@@ -349,10 +358,57 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
     }
 }
 #contact .picture-text{
-    flex-direction: column;
-    gap: 0px;
+    /* flex-direction: column; */
+    /* gap: 0px; */
+    /* margin: auto 0; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin-top: 5%; */
+    /* align-items: center; */
+    width: min-content;
+    /* height: fit-content; */
+    display: block;
+    /* height: initial; */
+    max-height: inherit;
+}
+#contact .title, #coming-soon .title{
+    padding-top: 50px;
+    margin: 2% 0 0;
 }
 
+#copy-info{
+    display: none;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin: 0;
+}
+.contact-icon {
+    /* width: 45%; */
+    /* margin: auto; */
+    /* max-height: 100%; */
+}
+
+#email {
+    cursor: pointer;
+}
+
+
+.contact-icon a {
+    display: block;
+    max-height: 100%;
+    display: block;
+}
+
+.contact-icon {
+    max-height: 50%;
+    max-width: 33%;
+    height: -webkit-fill-available;
+}
+
+#email {
+    flex-direction: row;
+}
 /*Footer*/
 
 footer {
@@ -378,14 +434,14 @@ footer {
     font-size: 1rem;
     }
   #contact .home-content{
-    margin: 0 0% auto 0%;
+    /* margin: 0 0% auto 0%; */
     width: 90%;
   }
   section{
     padding-bottom: 3%;
   }
   nav ul a, nav ul li, #name, nav div a {
-    font-size: 1.3rem;
+    font-size: rem;
     padding: 0.2rem;
     }
 }
@@ -423,16 +479,18 @@ footer {
 
 @media screen and (max-width: 500px) {
   section{
-    max-height: 1550px;
-    height: 300vh;
-    min-block-size: auto;
+    height: auto;
+    /* min-block-size: auto; */
   }
+  #name, #nav-contact {
+     width: auto;
+}
   /* Style the navigation menu */
   nav {
       overflow: hidden;
       flex-direction: column;
       position: fixed;
-      border-radius: 0px 0px var(--curve) var(--curve);
+      border-radius: 0 0 0 var(--curve);
     }
     nav ul li {
     float: none;
@@ -440,9 +498,14 @@ footer {
     /* Hide the links inside the navigation menu (except for logo/home) */
   nav #nav-list, nav #nav-contact {
       display: none;
+      padding-left: 3%;
+      text-align: left;
+      padding-top: 0;
+      font-size: 1.5rem;
     }
   nav #name{
       padding-left: 5%;
+      font-size: 2rem;
     }
     /* Style navigation menu links */
   nav a {
@@ -457,12 +520,15 @@ footer {
     align-items: center;
     justify-content: center;
     right: 0;
+    padding: 0 1%;
+    height: 45px;
     }
   #burger {
     font-size: xx-large;
     color: var(--blue-primary);
     }
   #home, #contact {
+    max-height: 100vh;
     height: 100vh;
   }
   #projects{
@@ -475,13 +541,14 @@ footer {
     justify-content: space-evenly;
     padding: 5% 0 8% 0;
     flex-direction: column;
-    min-block-size: auto;
+    /* min-block-size: auto; */
   }
   #headshot {
     height: 45%;
     }
   .title{
     margin-bottom: 8%;
+    padding-top: 40px;
   }
   #contact .title{
     margin: 8% 0 5%;
@@ -489,38 +556,51 @@ footer {
   .summary, #projects-page .summary{
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     }
   .summary-box, #projects-page .summary-box {
     min-block-size: auto;
     justify-content: space-between;
+    max-width: fit-content !important;
     }
   #contact .summary{
     flex-direction: column;
   }
   .contact-icon img{
-    max-height: 100%;
-    width: 100px;
-    object-fit: cover;
+    /* max-height: 15%; */
+    /* width: 100px; */
+    /* object-fit: cover; */
+    /* max-width: 100%; */
+    /* height: auto; */
 }
   #email-icon{
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    /* height: 100px; */
+    /* width: 100px; */
+    /* object-fit: cover; */
+    /* padding-bottom: 0; */
+    /* margin-bottom: 0; */
     }
   #email p{
-    padding-top: 0;
+    padding-left: 4%;
     margin-top: 0;
     color: black;
-    font-size: 1.5rem;
+    font-size: 4vw;
     font-weight: 600;
     text-align: center;
+    margin-bottom: 0;
     }
   #contact .home-content {
-    max-height: 80%;
+    max-height: 66%;
+    /* height: -webkit-fill-available; */
+    /* height: 0%; */
   }
+  #message {
+    font-size: 5vw;
+  }
+  #message span {
+    font-size: 6vw;
+  }
+
 }
 /***********************************************************************************************************/
 

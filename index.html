@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Phoebe Badcock Portfolio</title>
@@ -14,7 +12,7 @@
 		<div id="name">
 			Phoebe Badcock
 		</div>
-		<div id="nav-list">
+		<div onclick="menuFunction()" id="nav-list">
 			<ul>
 				<li>
 				  <a href="#home">Home</a>
@@ -30,25 +28,19 @@
 				</li>
 		    </ul>
 		</div>
-		<div id="nav-contact">
-			<ul>
-				<li>
-				  <a href="#contact">Contact</a>
-				</li>
-		    </ul>
+		<div onclick="menuFunction()" id="nav-contact">
+			<a href="#contact">Contact</a>
 		</div>
 		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  		<a href="javascript:void(0);" id="menu-icon" onclick="menuFunction()">
-    	<i class="fa fa-bars" id="burger"></i>
-  </a>
+  		<a id="menu-icon" onclick="menuFunction()">
+    		<i class="fa fa-bars" id="burger"></i>
+  		</a>
     </nav>
   <!-- END NAV -->
   <!-- START HOME SECTION -->
 	<section id="home">
 		<div class="home-content">
-			<img src="/Images/headshot.png"
-					 alt="Head Shot"
-					 id="headshot">
+			<img src="/Images/headshot.png" alt="Head Shot" id="headshot">
 			<div class="about">
 				<div class="picture-text">
 					<img src="https://d33wubrfki0l68.cloudfront.net/6e15034b71981e7553ddb6ba5acdf9b64c152af1/2e27b/assets/site/location.svg" alt="Location Icon" id="location-icon" width="15" height="15">
@@ -172,11 +164,11 @@
 				</div>
 				<div class="summary-box">
 					<div class="summary-description">
-						<h3>Education & Tech Tools</h3>
+						<h3>Education &amp; Tech Tools</h3>
 						<h4>Skills</h4>
 						<ul>
 							<li>Python, Java, JavaScript</li>
-							<li>HTML & CSS</li>
+							<li>HTML &amp; CSS</li>
 							<li>Flask, Selenium, Webdriver, APIs</li>
 							<li>SQL (Postgres Database)</li>
 							<li>GitHub, Jira, Confluence</li>
@@ -202,14 +194,13 @@
 						</ul>
 					</div>
 					<!--<a href="" target="_blank">Download CV</a>-->
-					<a href="/Phoebe Badcock CV.pdf"
-							download>
+					<a href="/Phoebe Badcock CV.pdf" download="">
 						<button class="btn">
 							<i class="fa fa-download"></i>
 							Download CV
 						</button>
 					</a>
-				</div>	
+				</div>
 		</div>
     </section>
   <!-- END Experience SECTION -->
@@ -286,23 +277,14 @@
 				<span>Get in touch!</span>
 			</div>
 			<div class="summary">
-				<div class="contact-icon">
-					<a href="https://www.linkedin.com/in/phoebe-badcock-470165195/">
+    <a href="https://www.linkedin.com/in/phoebe-badcock-470165195/" class="contact-icon">
 						<img src="/Images/linkedin-logo.png" alt="LinkedIn Icon" id="linkedin-icon">
-					</a>
-				</div>
-				<div class="contact-icon">
-					<a href="https://github.com/PhoebeBC">
+					</a><a href="https://github.com/PhoebeBC" class="contact-icon">
 						<img src="/Images/GitHub-logo-500x281.png" alt="GitHub Icon" id="github-icon">
 					</a>
-				</div>
-				<div class="picture-text" id="email">
-					<a href="javascript:void(0);" id="email-link">
-						<img src="/Images/email-icon.png" alt="Email Icon" id="email-icon">
-					</a>
-					<p id="email-copy">phoebe.badcock<br>@mail.com</p>
-					<button id="copy-button" onclick="copyFunction()">Copy Email</button>
-			  </div>
+
+				<div onmouseover="showCopyButton()" onmouseleave="hideCopyButton()" onclick="copyFunction()" class="contact-icon picture-text" id="email"><p id="copy-info" style="display: none;">Click to copy Email</p><img src="/Images/email-icon.png" alt="Email Icon" id="email-icon"><p id="email-copy">phoebe.badcock<br>@mail.com</p></div>
+
 			</div>
 		</div>
     </section>
@@ -310,5 +292,5 @@
   	<footer>
 		<div id="reference">Hosted using GitHub Pages</div>
 	</footer>
-</body>
-</html>
+
+<div id="sp-installed"></div></body></html>
