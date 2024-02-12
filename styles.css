@@ -93,15 +93,15 @@ nav ul a, nav ul li, #name, #nav-contact, nav div a{
     padding: 0.6rem 0.4rem;
     font-weight: 550;
     color: var(--white);
-
-     /*Needs to be same as nav background*/
 }
 
 nav ul a:hover, nav ul li:hover, nav div a:hover{
     text-decoration-line: underline;
     text-decoration-color: var(--white);
 }
-
+/*nav ul a:target, nav ul li:target, nav div a:target{
+    color: var(--highlight);
+}*/
 #name, #nav-contact {
      width: 210px;
 }
@@ -350,11 +350,12 @@ box-shadow: 0px -5px 5px 0px var(--secondary-shadow);
     /* flex-direction: row; */
     /* flex-grow: 0; */
 }
-.contact-icon img{
+.contact-icon img {
     max-height: 100%;
     max-width: 100%;
 }
-.contact-icon a {
+
+.contact-icon a, #content .summary div {
     display: block;
     max-height: 100%;
     display: block;
@@ -364,21 +365,30 @@ box-shadow: 0px -5px 5px 0px var(--secondary-shadow);
     max-width: 33%;
     height: -webkit-fill-available;
 }
-.github-icon{
-    width: 300px;
+#contact .picture-text{
+    width: min-content;
+    display: block;
+    max-height: inherit;
+}
+
+div#github-icon, div#linkedin-icon {
+    max-width: 125px;
+}
+#github-icon:hover, #linkedin-icon:hover {
+    padding-top: 1%
 }
 #email-icon{
     /* height: 130px; */
     /* width: 200px; */
     /* object-fit: cover; */
-    padding-bottom: 0;
-    margin-bottom: 0;
+    padding-bottom: 2%;
+    margin: 0;
 }
 #email {
     cursor: pointer;
     flex-direction: row;
 }
-#email-copy{
+.logo-text{
     padding-top: 0;
     margin-top: 0;
     color: white;
@@ -400,12 +410,6 @@ box-shadow: 0px -5px 5px 0px var(--secondary-shadow);
     font-weight: 100;
     margin: 0;
     text-align: center;
-}
-
-#contact .picture-text{
-    width: min-content;
-    display: block;
-    max-height: inherit;
 }
 
 #contact .title, #coming-soon .title{
@@ -447,8 +451,8 @@ footer {
   section{
     padding-bottom: 3%;
   }
-  nav ul a, nav ul li, #name, nav div a {
-    font-size: rem;
+  nav ul a, nav ul li, #name, #nav-contact, nav div a {
+    font-size: 1.2rem;
     padding: 0.2rem;
     }
 }
@@ -558,7 +562,7 @@ footer {
     padding-top: 40px;
   }
   #contact .title{
-    margin: 8% 0 5%;
+    margin: 5% 0 5%;
   }
   .summary, #projects-page .summary{
     flex-direction: column;
@@ -571,27 +575,41 @@ footer {
     max-width: fit-content !important;
     }
   #contact .summary{
+    gap: 5%;
+    margin-top: 4%;
+  }
+  #contact .summary #linkedin-icon, #contact .summary #github-icon {
+    max-height: 20%;
+   }
+   #contact .summary #email{
+    max-width: 25%;
+   }
+   #contact .picture-text{
+    display: flex;
     flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 0;
+   }
+  #email-icon {
+    margin-bottom: -10px;
   }
   #email p{
     padding-left: 4%;
     margin-top: 0;
-    color: black;
+    color: white;
     font-size: 4vw;
     font-weight: 600;
     text-align: center;
     margin-bottom: 0;
     }
-  #contact .home-content {
-    max-height: 66%;
-  }
   #message {
     font-size: 5vw;
+    margin: auto 2%;
   }
   #message span {
     font-size: 6vw;
   }
-
 }
 /***********************************************************************************************************/
 

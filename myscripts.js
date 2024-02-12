@@ -1,14 +1,13 @@
 function showCopyButton() {
   var copyInfo = document.getElementById("copy-info");
   copyInfo.style.display = "block";
-
+  copyInfo.style.zIndex = "10";
 }
 
 function hideCopyButton() {
   var copyInfo = document.getElementById("copy-info");
   copyInfo.style.display = "none";
   copyInfo.innerText = "Click to copy Email";
-
 }
 
 function copyFunction() {
@@ -22,20 +21,30 @@ function copyFunction() {
   copyInfo.innerText = "Copied";
 }
 
+function bobDown(icon) {
+  var bobImg = document.getElementById(icon);
+  bobImg.style.paddingTop = "5%";
+}
 
+function bobUp(icon) {
+  var bobImg = document.getElementById(icon);
+  bobImg.style.paddingTop = "0";
+}
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function menuFunction() {
-  var x = document.getElementById("nav-list");
-  var y = document.getElementById("nav-contact");
-  var z = document.getElementById("nav");
+  var navList = document.getElementById("nav-list");
+  var navContact = document.getElementById("nav-contact");
+
+  if (getComputedStyle(document.getElementById("menu-icon")).display == "none") {
+    return;
+  }
   /*+ document.getElementById("nav-contact");*/
-  if (x.style.display === "block" && y.style.display === "block") {
-    x.style.display = "none";
-    y.style.display = "none";
+  if (navList.style.display == "block" && navContact.style.display == "block") {
+    navList.style.display = "none";
+    navContact.style.display = "none";
   } else {
-    x.style.display = "block";
-    y.style.display = "block";
-    /*z.style.border-radius = "0px 0px var(--curve) var(--curve)";*/
+    navList.style.display = "block";
+    navContact.style.display = "block";
   }
 }
