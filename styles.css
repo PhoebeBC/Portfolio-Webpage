@@ -1,33 +1,21 @@
 :root {
-    --white: #f1f1ea;
-    /*Greens*/
-    --green-highlight: #B9CAAD; /*#b8f397;*/
-    --green-light: #9dd67d;
-    --green-primary: #205106;
-    --green-dark: #232E21;  /*#072100;*/
-        /*Gray*/
-    --gray-highlight: #d9e7cb;
-    --gray-light: #bdcbb0;
-    --gray-primary: #3e4a35;
-    --gray-dark: #131f0d;
-        /*Blue*/
-    --blue-highlight: #506495;
-    --blue-light: #a0cfd0;
-    --blue-primary: #1e4e4e;
-    --blue-dark: #2F323A;
+    --white: #ffffff;
+    --primary: #0b5351;
+    --primary-shadow: #719594;
+    --secondary: #9a8f97;
+    --secondary-shadow: #9a8f9799;
+    --tertiary: #092327;
+    --highlight: #c1d7ae;
     /*formatting*/
     --curve: 20px;
 }
 /*
-#52489C
-#655560
-#553A41
 Inter,sans-serif
 */
 /*ELEMENTS*/
 body {
-    background-color: var(--green-dark);
-    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    font-family: /*Inter,sans-serif*/'Poppins', sans-serif;
     margin: 0;
 }
 
@@ -44,8 +32,9 @@ h2, h3, h4, h5{
     margin:2% 0%;
 }
 
-p {
+p, li {
     text-wrap: balance;
+    font-family: Inter,sans-serif;
 }
 
 a {
@@ -62,6 +51,12 @@ section {
     /* padding-top: 30px; */
 }
 
+/*Section titles for each section*/
+.title {
+    margin: 2%;
+    padding-top: 30px;
+}
+
 
 /*Navigation bar*/
 
@@ -75,7 +70,7 @@ nav {
     z-index: 10;
     /* padding-bottom: 5px; */ /*Keeps nave bar looking nice*/
     border-radius: 0px 0px var(--curve) var(--curve);
-    background-color: var(--blue-primary);
+    background-color: var(--tertiary);
 }
 nav #menu-icon{
     display: none;
@@ -104,7 +99,7 @@ nav ul a, nav ul li, #name, #nav-contact, nav div a{
 
 nav ul a:hover, nav ul li:hover, nav div a:hover{
     text-decoration-line: underline;
-    text-decoration-color:  var(--white);
+    text-decoration-color: var(--white);
 }
 
 #name, #nav-contact {
@@ -118,17 +113,18 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
 /*HOME*/
 
 #home, #contact{
-    background-color: var(--green-dark);
+    background-color: var(--primary);
     color: var(--white);
     padding-top: 0;
 }
 #home{
     padding-top: 0;
+    /* box-shadow: 0px 5px 12px 0px var(--primary); */
 }
 
 #home h1{
-    font-size: 2.5rem;
-    color: var(--gray-primary);
+    font-size: 3rem;
+    color: var(--highlight);
 }
 
 #home p{
@@ -151,7 +147,7 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
     max-height: 70%;
     width: 80%;
     border-radius: 40px;
-    background-color: var(--green-highlight);
+    /* background-color: var(--grey-light); */
 }
 
 #headshot {
@@ -178,16 +174,18 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
 /*PROJECTS- and repeated in extras, current and coming soon sections*/
 
 #projects, #current, #extras, #coming-soon{
-     background-color: var(--gray-primary);
-     color: var(--gray-light);
+     background-color: white;
+     color: var(--tertiary);
 }
-
-#projects h2 , #current h2, #extras h2,  #coming-soon h2{
-    color: var(--gray-light);
+#projects {
+box-shadow: inset 0px 5px 5px 0px var(--primary-shadow);
+}
+#projects h2 , #current h2, #extras h2, #coming-soon h2{
+    color: var(--tertiary);
     font-size: 2rem;
 }
 #projects h3, #current h3, #extras h3,  #coming-soon h3 {
-    color: var(--gray-dark);
+    color: var(--white);
     font-size: 1.5rem;
     display: flex;
     padding: 5%;
@@ -195,10 +193,14 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
     text-align: center;
 }
 
-/*Section titles for each section*/
-.title {
-    margin: 2%;
-    padding-top: 30px;
+section #projects{
+    box-shadow: inset 0px 5px 10px var(--primary-shadow);
+}
+
+#projects .summary-box, #current .summary-box {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 4px 4px 5px var(--primary-shadow);
 }
 
 /*1st Div for box which includes header*/
@@ -246,26 +248,29 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
 }
 
 .summary-box a {
-    color: var(--gray-dark);
+    color: var(--white);
 }
 .summary-box a:hover {
-    color: var(--blue-highlight);
+    color: var(--highlight);
 }
 
 /*EXPERIENCE and sections complete, contact*/
 
 #experience, #complete{
-     background-color: var(--green-highlight);
-     color: var(--green-dark);
+     background-color: var(--secondary);
+     color: var(--tertiary);
+}
+#experience, #complete {
+box-shadow: 0px -5px 5px 0px var(--secondary-shadow);
 }
 
 #experience h2, #complete h2{
-    color: var(--green-dark);
+    color: var(--tertiary);
     font-size: 2rem;
 }
 
 #experience h3 , #complete h3 {
-    color: var(--green-highlight);
+    color: var(--tertiary);
     font-size: 1.5rem;
     display: flex;
     padding: 5% 0;
@@ -275,29 +280,46 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
 
 /*box div*/
 #experience .summary-box, #complete .summary-box{
-    color: var(--green-highlight);
-    background-color: var(--green-dark);
+    color: var(--tertiary);
+    background-color: white;
 }
-#experience .summary-box a:visited, #complete .summary-box a:visited {
-    color: var(--green-highlight)
+#complete .summary-box a:visited {
+    color: var(--tertiary);
 }
-#experience .summary-box a:hover, #complete .summary-box a:hover {
-    color: var(--green-light);
+#complete .summary-box a:hover {
+    color: var(--highlight);
 }
 /*Download CV*/
 .btn {
-  color: var(--green-dark);
+  color: var(--white);
   height: 50px;
   font-size: 20px;
   margin-bottom: 5%;
-  background-color: var(--green-highlight);
+  background-color: var(--secondary);
+  cursor: pointer;
 }
+.btn:hover {
+    background-color: var(--highlight);
+}
+
 /*EXTRAS - in projects*/
+#extras, #coming-soon {
+    box-shadow: inset 0px 5px 5px 0px var(--secondary-shadow);
+}
+
+#extras .summary-box, #coming-soon .summary-box {
+    background-color: var(--secondary);
+    color: white;
+    box-shadow: 4px 4px 5px #d7ccd4;
+}
 /*CONTACT*/
 
 #contact h2 {
-    color: var(--green-highlight);
+    color: var(--white);
     font-size: 2rem;
+}
+#contact{
+    box-shadow: 0px -5px 5px 0px var(--primary-shadow);
 }
 #contact .home-content{
     /* margin: 0 auto auto auto; */
@@ -309,7 +331,7 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
 }
 #message{
     font-size: 2rem;
-    color: var(--gray-primary);
+    color: var(--highlight);
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     margin: 2%;
@@ -332,6 +354,16 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
     max-height: 100%;
     max-width: 100%;
 }
+.contact-icon a {
+    display: block;
+    max-height: 100%;
+    display: block;
+}
+.contact-icon {
+    max-height: 50%;
+    max-width: 33%;
+    height: -webkit-fill-available;
+}
 .github-icon{
     width: 300px;
 }
@@ -342,87 +374,62 @@ nav ul a:hover, nav ul li:hover, nav div a:hover{
     padding-bottom: 0;
     margin-bottom: 0;
 }
+#email {
+    cursor: pointer;
+    flex-direction: row;
+}
 #email-copy{
     padding-top: 0;
     margin-top: 0;
-    color: black;
+    color: white;
     /* font-size: 1.5rem; */
     font-weight: 600;
     text-align: center;
 }
-
 #email-link:hover{
     #copy-button{
         display: block;
+        color: white;
         z-index: 10;
     }
 }
+#copy-info{
+    display: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin: 0;
+    text-align: center;
+}
+
 #contact .picture-text{
-    /* flex-direction: column; */
-    /* gap: 0px; */
-    /* margin: auto 0; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* margin-top: 5%; */
-    /* align-items: center; */
     width: min-content;
-    /* height: fit-content; */
     display: block;
-    /* height: initial; */
     max-height: inherit;
 }
+
 #contact .title, #coming-soon .title{
     padding-top: 50px;
     margin: 2% 0 0;
 }
 
-#copy-info{
-    display: none;
-    color: black;
-    font-size: 0.8rem;
-    font-weight: 100;
-    margin: 0;
-}
-.contact-icon {
-    /* width: 45%; */
-    /* margin: auto; */
-    /* max-height: 100%; */
-}
 
-#email {
-    cursor: pointer;
-}
-
-
-.contact-icon a {
-    display: block;
-    max-height: 100%;
-    display: block;
-}
-
-.contact-icon {
-    max-height: 50%;
-    max-width: 33%;
-    height: -webkit-fill-available;
-}
-
-#email {
-    flex-direction: row;
-}
 /*Footer*/
 
 footer {
+    margin-top: -20px;
     display: flex; /*Keeps all items on singular line*/
     justify-content: end; /*Equally spaces out div elements in nave bar*/
     border-radius: var(--curve) var(--curve) 0px 0px;
-    background-color: var(--blue-dark);
+    background-color: var(--tertiary);
+    color: white;
 }
 
 #reference {
    font-size: 0.5rem;
    padding: 0.5rem;
    font-weight: 550;
-   color: var(--blue-highlight);
+   color: var(--white);
    text-align: center;
 }
 
@@ -525,7 +532,7 @@ footer {
     }
   #burger {
     font-size: xx-large;
-    color: var(--blue-primary);
+    color: var(--tertiary);
     }
   #home, #contact {
     max-height: 100vh;
@@ -566,20 +573,6 @@ footer {
   #contact .summary{
     flex-direction: column;
   }
-  .contact-icon img{
-    /* max-height: 15%; */
-    /* width: 100px; */
-    /* object-fit: cover; */
-    /* max-width: 100%; */
-    /* height: auto; */
-}
-  #email-icon{
-    /* height: 100px; */
-    /* width: 100px; */
-    /* object-fit: cover; */
-    /* padding-bottom: 0; */
-    /* margin-bottom: 0; */
-    }
   #email p{
     padding-left: 4%;
     margin-top: 0;
@@ -591,8 +584,6 @@ footer {
     }
   #contact .home-content {
     max-height: 66%;
-    /* height: -webkit-fill-available; */
-    /* height: 0%; */
   }
   #message {
     font-size: 5vw;
@@ -626,4 +617,8 @@ footer {
 #projects-page .summary-description {
    display: flex;
    flex-direction: column;
+}
+
+#current .title, #complete .title {
+    margin-bottom: 0;
 }
