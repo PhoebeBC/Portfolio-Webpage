@@ -1,642 +1,673 @@
 :root {
-    --white: #ffffff;
-    --primary: #0b5351;
-    --primary-shadow: #719594;
-    --secondary: #9a8f97;
-    --secondary-shadow: #9a8f9799;
-    --tertiary: #092327;
-    --highlight: #c1d7ae;
-    /*formatting*/
-    --curve: 20px;
+	--white: #ffffff;
+	--primary: #0b5351;
+	--primary-shadow: #719594;
+	--secondary: #9a8f97;
+	--secondary-shadow: #9a8f9799;
+	--tertiary: #092327;
+	--highlight: #c1d7ae;
+	--curve: 20px;
 }
-/*
-Inter,sans-serif
-*/
+
 /*ELEMENTS*/
 body {
-    background-color: white;
-    font-family: /*Inter,sans-serif*/'Poppins', sans-serif;
-    margin: 0;
+	background-color: white;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
 }
 
-h1{
+h1
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    margin-bottom:5%;
-    margin-top:1%;
 }
 
-h2, h3, h4, h5{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    margin:2% 0%;
+h1 {
+	font-weight: 700;
+	margin-bottom: 5%;
+	margin-top: 1%;
 }
 
-p, li {
-    text-wrap: balance;
-    font-family: Inter,sans-serif;
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 600;
+	margin: 2% 0;
+}
+
+p,
+li {
+	text-wrap: balance;
+	font-family: Inter, sans-serif;
 }
 
 a {
-    /* padding-bottom: 3%; */
-    text-decoration-line: none;
+	text-decoration-line: none;
 }
 
 section {
-    display: flex; /*Displays divs nicely in each section*/
-    flex-direction: column; /*Keeps section titles above boxes*/
-    align-items: center; /*centers divs on the vertical axis*/
-    height: 100vh;
-    /* max-height: 650px; */
-    /* padding-top: 30px; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
 }
 
-/*Section titles for each section*/
 .title {
-    margin: 2%;
-    padding-top: 30px;
+	margin: 2%;
+	padding-top: 30px;
 }
-
+.title h2{
+    font-size: 2rem;
+}
 
 /*Navigation bar*/
-
 nav {
-    display: flex; /*Keeps all items on singular line*/
-     /*Equally spaces out div elements in nave bar*/
-    justify-content: space-between;
-    position: fixed; /*Mean nav bar will always be visible even when scrolling*/
-    left: 0px;
-    right: 0px;
-    z-index: 10;
-    /* padding-bottom: 5px; */ /*Keeps nave bar looking nice*/
-    border-radius: 0px 0px var(--curve) var(--curve);
-    background-color: var(--tertiary);
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	border-radius: 0 0 var(--curve) var(--curve);
+	background-color: var(--tertiary);
 }
-nav #menu-icon{
-    display: none;
+
+nav #menu-icon {
+	display: none;
 }
 
 nav ul {
-    /*keeps nave bar dimensions to nav bar id*/
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 
-nav ul li{
-   /*Removes bullet points*/
-  float: left; /*Keeps list horizontal*/
+nav ul li {
+	float: left;
 }
 
-nav ul a, nav ul li, #name, #nav-contact, nav div a{
-    font-size: 1.5rem;
-    padding: 0.6rem 0.4rem;
-    font-weight: 550;
-    color: var(--white);
+nav ul li,
+#name,
+#nav-contact,
+nav div a {
+	font-size: 1.5rem;
+	padding: 0.6rem 0.4rem;
+	font-weight: 550;
+	color: var(--white);
 }
 
-nav ul a:hover, nav ul li:hover, nav div a:hover{
-    text-decoration-line: underline;
-    text-decoration-color: var(--white);
+nav ul li:hover,
+nav div a:hover {
+	text-decoration-line: underline;
+	text-decoration-color: var(--white);
 }
-/*nav ul a:target, nav ul li:target, nav div a:target{
-    color: var(--highlight);
-}*/
-#name, #nav-contact {
-     width: 210px;
+
+#name,
+#nav-contact {
+	width: 210px;
 }
 
 #nav-contact {
-    text-align: right;
+	text-align: right;
 }
+
 
 /*HOME*/
-
-#home, #contact{
-    background-color: var(--primary);
-    color: var(--white);
-    padding-top: 0;
-}
-#home{
-    padding-top: 0;
-    /* box-shadow: 0px 5px 12px 0px var(--primary); */
+#home,
+#contact {
+	background-color: var(--primary);
+	color: var(--white);
+	padding-top: 0;
 }
 
-#home h1{
-    font-size: 3rem;
-    color: var(--highlight);
+#home {
+	padding-top: 0;
 }
 
-#home p{
-    font-size: 0.5rem;
+#home h1 {
+	font-size: 3rem;
+	color: var(--highlight);
 }
 
-#home h2{
-    font-size: 1.5rem;
+#home p {
+	font-size: 0.5rem;
 }
 
+#home h2 {
+	font-size: 1.5rem;
+}
 
-.home-content{
-    margin: auto 10%;
-    padding: 3% 0;
-    position: relative;
-    top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 70%;
-    width: 80%;
-    border-radius: 40px;
-    /* background-color: var(--grey-light); */
+.home-content {
+	margin: auto 10%;
+	padding: 3% 0;
+	position: relative;
+	top: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: 70%;
+	width: 80%;
+	border-radius: 40px;
 }
 
 #headshot {
-    height: -webkit-fill-available;
-    padding: 0 3%;
+	height: -webkit-fill-available;
+	padding: 0 3%;
 }
 
-.about{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0 3%;
+.about {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding: 0 3%;
 }
 
-.picture-text { /*for the location icon and location*/
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center; /*Alights elements on centre of vertical axis*/
-    gap: 6px; /*Gap between icon and text*/
+#picture-text {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	gap: 6px;
 }
 
 
 /*PROJECTS- and repeated in extras, current and coming soon sections*/
-
-#projects, #current, #extras, #coming-soon{
-     background-color: white;
-     color: var(--tertiary);
+#projects,
+#current,
+#extras,
+#coming-soon {
+	background-color: white;
+	color: var(--tertiary);
 }
+
 #projects {
-box-shadow: inset 0px 5px 5px 0px var(--primary-shadow);
-}
-#projects h2 , #current h2, #extras h2, #coming-soon h2{
-    color: var(--tertiary);
-    font-size: 2rem;
-}
-#projects h3, #current h3, #extras h3,  #coming-soon h3 {
-    color: var(--white);
-    font-size: 1.5rem;
-    display: flex;
-    padding: 5%;
-    margin: auto;
-    text-align: center;
+	box-shadow: inset 0 5px 5px 0 var(--primary-shadow);
 }
 
-section #projects{
-    box-shadow: inset 0px 5px 10px var(--primary-shadow);
+#projects h3,
+#current h3,
+#extras h3,
+#coming-soon h3 {
+	font-size: 1.5rem;
+	display: flex;
+	padding: 5%;
+	margin: auto;
+	text-align: center;
 }
 
-#projects .summary-box, #current .summary-box {
-    background-color: var(--primary);
-    color: white;
-    box-shadow: 4px 4px 5px var(--primary-shadow);
+section #projects {
+	box-shadow: inset 0 5px 10px var(--primary-shadow);
 }
 
-/*1st Div for box which includes header*/
+#projects .summary-box,
+#current .summary-box {
+	background-color: var(--primary);
+	color: white;
+	box-shadow: 4px 4px 5px var(--primary-shadow);
+}
+
 .summary {
-    position: relative;
-    /* top: 15px; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-direction: row; /*Aligns divs within this div to be side by side and not stacked*/
-    /*Ensures it fills the container so when aligning centrally it looks good*/
-    margin: auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	flex-direction: row;
+	margin: auto;
 }
 
-/*box div*/
 .summary-box {
-    margin: 0 20px 5%;
-    padding: 0 2% 1%;
-    display: flex;
-    min-block-size: -webkit-fill-available;
-    width: 100%;
-    max-height: 80%;
-    max-width: 250px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--gray-dark);
-    background-color: var(--gray-highlight);
-    border-radius: var(--curve);
+	margin: 0 20px 5%;
+	padding: 0 2% 1%;
+	display: flex;
+	min-block-size: -webkit-fill-available;
+	width: 100%;
+	max-height: 80%;
+	max-width: 250px;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--gray-dark);
+	background-color: var(--gray-highlight);
+	border-radius: var(--curve);
 }
 
-/*box content excluding button*/
 .summary-description {
-    margin: 0%;
-    padding: 0;
-    align-items: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+	margin: 0;
+	padding: 0;
+	align-items: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 .summary-description ul {
-    padding-left: 10%;
+	padding-left: 10%;
 }
 
 .summary-box a {
-    color: var(--white);
+	color: var(--white);
 }
+
 .summary-box a:hover {
-    color: var(--highlight);
+	color: var(--highlight);
 }
+
 
 /*EXPERIENCE and sections complete, contact*/
-
-#experience, #complete{
-     background-color: var(--secondary);
-     color: var(--tertiary);
-}
-#experience, #complete {
-box-shadow: 0px -5px 5px 0px var(--secondary-shadow);
+#experience,
+#complete {
+	background-color: var(--secondary);
+	color: var(--tertiary);
 }
 
-#experience h2, #complete h2{
-    color: var(--tertiary);
-    font-size: 2rem;
+#experience,
+#complete {
+	box-shadow: 0 -5px 5px 0 var(--secondary-shadow);
 }
 
-#experience h3 , #complete h3 {
-    color: var(--tertiary);
-    font-size: 1.5rem;
-    display: flex;
-    padding: 5% 0;
-    margin: auto;
-    text-align: center;
+#experience h3,
+#complete h3 {
+	font-size: 1.5rem;
+	display: flex;
+	padding: 5% 0;
+	margin: auto;
+	text-align: center;
 }
 
-/*box div*/
-#experience .summary-box, #complete .summary-box{
-    color: var(--tertiary);
-    background-color: white;
+#experience .summary-box,
+#complete .summary-box {
+	color: var(--tertiary);
+	background-color: white;
 }
+
 #complete .summary-box a:visited {
-    color: var(--tertiary);
+	color: var(--tertiary);
 }
+
 #complete .summary-box a:hover {
-    color: var(--highlight);
+	color: var(--highlight);
 }
+
 /*Download CV*/
 .btn {
-  color: var(--white);
-  height: 50px;
-  font-size: 20px;
-  margin-bottom: 5%;
-  background-color: var(--secondary);
-  cursor: pointer;
+	color: var(--white);
+	height: 50px;
+	font-size: 20px;
+	margin-bottom: 5%;
+	background-color: var(--secondary);
+	cursor: pointer;
 }
+
 .btn:hover {
-    background-color: var(--highlight);
+	background-color: var(--highlight);
 }
 
-/*EXTRAS - in projects*/
-#extras, #coming-soon {
-    box-shadow: inset 0px 5px 5px 0px var(--secondary-shadow);
+
+/*EXTRAS - most in projects*/
+#extras,
+#coming-soon {
+	box-shadow: inset 0 5px 5px 0 var(--secondary-shadow);
 }
 
-#extras .summary-box, #coming-soon .summary-box {
-    background-color: var(--secondary);
-    color: white;
-    box-shadow: 4px 4px 5px #d7ccd4;
+#extras .summary-box,
+#coming-soon .summary-box {
+	background-color: var(--secondary);
+	color: white;
+	box-shadow: 4px 4px 5px #d7ccd4;
 }
+
+
 /*CONTACT*/
-
 #contact h2 {
-    color: var(--white);
-    font-size: 2rem;
+	color: var(--white);
+	font-size: 2rem;
 }
-#contact{
-    box-shadow: 0px -5px 5px 0px var(--primary-shadow);
+
+#contact {
+	box-shadow: 0 -5px 5px 0 var(--primary-shadow);
 }
-#contact .home-content{
-    /* margin: 0 auto auto auto; */
-    display: flex;
-    flex-direction: column;
-    max-height: 60%;
-    /* margin-bottom: 120px; */
-    /* flex: auto; */
+
+#contact .home-content {
+	display: flex;
+	flex-direction: column;
+	max-height: 60%;
 }
-#message{
-    font-size: 2rem;
-    color: var(--highlight);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    margin: 2%;
-    text-align: center;
-    /* max-height: 33%; */
+
+#message {
+	font-size: 2rem;
+	color: var(--highlight);
+	font-weight: 600;
+	margin: 2%;
+	text-align: center;
 }
-#message span{font-size: 3rem;}
-#contact .summary{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    max-height: 75%;
-    /* height: 50%; */
-    /* max-height: -webkit-fill-available; */
-    /* flex-direction: row; */
-    /* flex-grow: 0; */
+
+#message span {
+	font-size: 3rem;
 }
+
+#contact .summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	max-height: 75%;
+}
+
 .contact-icon img {
-    max-height: 100%;
-    max-width: 100%;
+	max-height: 100%;
+	max-width: 100%;
 }
 
-.contact-icon a, #content .summary div {
-    display: block;
-    max-height: 100%;
-    display: block;
+.contact-icon a,
+#content .summary div {
+	display: block;
+	max-height: 100%;
 }
+
 .contact-icon {
-    max-height: 50%;
-    max-width: 33%;
-    height: -webkit-fill-available;
-}
-#contact .picture-text{
-    width: min-content;
-    display: block;
-    max-height: inherit;
+	max-height: 50%;
+	max-width: 33%;
+	height: -webkit-fill-available;
 }
 
-div#github-icon, div#linkedin-icon {
-    max-width: 125px;
+div#github-icon,
+div#linkedin-icon {
+	max-width: 125px;
 }
-#github-icon:hover, #linkedin-icon:hover {
-    padding-top: 1%
+
+#github-icon:hover,
+#linkedin-icon:hover {
+	padding-top: 1%
 }
-#email-icon{
-    /* height: 130px; */
-    /* width: 200px; */
-    /* object-fit: cover; */
-    padding-bottom: 2%;
-    margin: 0;
-}
+
 #email {
-    cursor: pointer;
-    flex-direction: row;
-}
-.logo-text{
-    padding-top: 0;
-    margin-top: 0;
-    color: white;
-    /* font-size: 1.5rem; */
-    font-weight: 600;
-    text-align: center;
-}
-#email-link:hover{
-    #copy-button{
-        display: block;
-        color: white;
-        z-index: 10;
-    }
-}
-#copy-info{
-    display: none;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: 100;
-    margin: 0;
-    text-align: center;
+	cursor: pointer;
+	flex-direction: row;
+	width: min-content;
+	display: block;
+	max-height: inherit;
 }
 
-#contact .title, #coming-soon .title{
-    padding-top: 50px;
-    margin: 2% 0 0;
+.logo-text {
+	margin-top: 0;
+	color: white;
+	font-weight: 600;
+	text-align: center;
+}
+
+#email:hover #copy-info {
+	display: block;
+	color: white;
+	z-index: 10;
+}
+
+#copy-info {
+	display: none;
+	font-size: 0.8rem;
+	margin: 0;
+	text-align: center;
+}
+
+#contact .title,
+#coming-soon .title {
+	padding-top: 50px;
+	margin: 2% 0 0;
 }
 
 
 /*Footer*/
-
 footer {
-    margin-top: -20px;
-    display: flex; /*Keeps all items on singular line*/
-    justify-content: end; /*Equally spaces out div elements in nave bar*/
-    border-radius: var(--curve) var(--curve) 0px 0px;
-    background-color: var(--tertiary);
-    color: white;
+	margin-top: -20px;
+	display: flex;
+	justify-content: end;
+	border-radius: var(--curve) var(--curve) 0 0;
+	background-color: var(--tertiary);
+	color: white;
 }
 
 #reference {
-   font-size: 0.5rem;
-   padding: 0.5rem;
-   font-weight: 550;
-   color: var(--white);
-   text-align: center;
+	font-size: 0.5rem;
+	padding: 0.5rem;
+	font-weight: 550;
+	text-align: center;
 }
 
 
-/*Media adjustments*/
-
+/*Media Adjustments*/
 @media screen and (max-width: 850px) {
-  #home h2{
-    font-size: 1rem;
-    }
-  #contact .home-content{
-    /* margin: 0 0% auto 0%; */
-    width: 90%;
-  }
-  section{
-    padding-bottom: 3%;
-  }
-  nav ul a, nav ul li, #name, #nav-contact, nav div a {
-    font-size: 1.2rem;
-    padding: 0.2rem;
-    }
+	#home h2 {
+		font-size: 1rem;
+	}
+
+	#contact .home-content {
+		width: 90%;
+	}
+
+	section {
+		padding-bottom: 3%;
+	}
+
+	nav ul a,
+	nav ul li,
+	#name,
+	#nav-contact,
+	nav div a {
+		font-size: 1.2rem;
+		padding: 0.2rem;
+	}
 }
 
 @media screen and (min-width: 1500px) {
-  #home h2{
-    font-size: 2rem;
-    }
-  .home-content{
-    width: 60%;
-  }
-  section{
-    padding: 7.5%;
-    justify-content: space-between;
-    gap: 15%;
-    }
-  .title {
-    margin-top: 0;
-    }
-  .summary {
-    justify-content: space-evenly;
-    }
-  .summary-box {
-    justify-content: space-between;
-    }
-  #projects-page .summary-box{
-    margin: 0 5% 5%;
-    justify-content: space-between;
-    }
-  #contact .title{
-    margin-top: 5%;
-    margin-bottom: 0;
-  }
+	#home h2 {
+		font-size: 2rem;
+	}
+
+	.home-content {
+		width: 60%;
+	}
+
+	section {
+		padding: 7.5%;
+		justify-content: space-between;
+		gap: 15%;
+	}
+
+	.title {
+		margin-top: 0;
+	}
+
+	.summary {
+		justify-content: space-evenly;
+	}
+
+	.summary-box {
+		justify-content: space-between;
+	}
+
+	#projects-page .summary-box {
+		margin: 0 5% 5%;
+		justify-content: space-between;
+	}
+
+	#contact .title {
+		margin-top: 5%;
+		margin-bottom: 0;
+	}
 }
 
 @media screen and (max-width: 500px) {
-  section{
-    height: auto;
-    /* min-block-size: auto; */
-  }
-  #name, #nav-contact {
-     width: auto;
+	section {
+		height: auto;
+	}
+
+	#name,
+	#nav-contact {
+		width: auto;
+	}
+
+	/* Style the navigation menu */
+	nav {
+		overflow: hidden;
+		flex-direction: column;
+		position: fixed;
+		border-radius: 0 0 0 var(--curve);
+	}
+
+	nav ul li {
+		float: none;
+	}
+
+	/* Hide the links inside the navigation menu (except for logo/home) */
+	nav #nav-list,
+	nav #nav-contact {
+		display: none;
+		padding-left: 3%;
+		text-align: left;
+		padding-top: 0;
+		font-size: 1.5rem;
+	}
+
+	nav #name {
+		padding-left: 5%;
+		font-size: 2rem;
+	}
+
+	nav a {
+		display: block;
+	}
+
+	/* Style the hamburger menu */
+	nav #menu-icon {
+		background: white;
+		display: flex;
+		position: absolute;
+		width: 10%;
+		align-items: center;
+		justify-content: center;
+		right: 0;
+		padding: 0 1%;
+		height: 45px;
+	}
+
+	#burger {
+		font-size: 32px;
+		color: var(--tertiary);
+	}
+
+	#home,
+	#contact {
+		height: 100vh;
+	}
+
+	#home h2 {
+		font-size: 1rem;
+	}
+
+	.home-content {
+		justify-content: space-evenly;
+		padding: 5% 0 8% 0;
+		flex-direction: column;
+	}
+
+	#headshot {
+		height: 45%;
+	}
+
+	.title {
+		margin-bottom: 8%;
+		padding-top: 40px;
+	}
+
+	#contact .title {
+		margin: 5% 0 5%;
+	}
+
+	.summary,
+	#projects-page .summary {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.summary-box,
+	#projects-page .summary-box {
+		min-block-size: auto;
+		justify-content: space-between;
+		max-width: fit-content !important;
+	}
+
+	#contact .summary {
+		gap: 5%;
+		margin-top: 4%;
+	}
+
+	#contact .summary #linkedin-icon,
+	#contact .summary #github-icon {
+		max-height: 20%;
+	}
+
+	#contact .summary #email {
+		max-width: 25%;
+	}
+
+	#email {
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-items: center;
+		gap: 0;
+	}
+
+	#email-icon {
+		margin-bottom: -10px;
+	}
+
+	#email p {
+		padding-left: 4%;
+		margin-top: 0;
+		color: white;
+		font-size: 4vw;
+		font-weight: 600;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	#message {
+		font-size: 5vw;
+		margin: auto 2%;
+	}
+
+	#message span {
+		font-size: 6vw;
+	}
 }
-  /* Style the navigation menu */
-  nav {
-      overflow: hidden;
-      flex-direction: column;
-      position: fixed;
-      border-radius: 0 0 0 var(--curve);
-    }
-    nav ul li {
-    float: none;
-    }
-    /* Hide the links inside the navigation menu (except for logo/home) */
-  nav #nav-list, nav #nav-contact {
-      display: none;
-      padding-left: 3%;
-      text-align: left;
-      padding-top: 0;
-      font-size: 1.5rem;
-    }
-  nav #name{
-      padding-left: 5%;
-      font-size: 2rem;
-    }
-    /* Style navigation menu links */
-  nav a {
-      display: block;
-    }
-    /* Style the hamburger menu */
-  nav #menu-icon {
-    background: white;
-    display: flex;
-    position: absolute;
-    width: 10%;
-    align-items: center;
-    justify-content: center;
-    right: 0;
-    padding: 0 1%;
-    height: 45px;
-    }
-  #burger {
-    font-size: xx-large;
-    color: var(--tertiary);
-    }
-  #home, #contact {
-    max-height: 100vh;
-    height: 100vh;
-  }
-  #projects{
-    max-height: 1400px;
-  }
-  #home h2{
-    font-size: 1rem;
-    }
-  .home-content{
-    justify-content: space-evenly;
-    padding: 5% 0 8% 0;
-    flex-direction: column;
-    /* min-block-size: auto; */
-  }
-  #headshot {
-    height: 45%;
-    }
-  .title{
-    margin-bottom: 8%;
-    padding-top: 40px;
-  }
-  #contact .title{
-    margin: 5% 0 5%;
-  }
-  .summary, #projects-page .summary{
-    flex-direction: column;
-    justify-content: space-between;
-    /* align-items: center; */
-    }
-  .summary-box, #projects-page .summary-box {
-    min-block-size: auto;
-    justify-content: space-between;
-    max-width: fit-content !important;
-    }
-  #contact .summary{
-    gap: 5%;
-    margin-top: 4%;
-  }
-  #contact .summary #linkedin-icon, #contact .summary #github-icon {
-    max-height: 20%;
-   }
-   #contact .summary #email{
-    max-width: 25%;
-   }
-   #contact .picture-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
-    gap: 0;
-   }
-  #email-icon {
-    margin-bottom: -10px;
-  }
-  #email p{
-    padding-left: 4%;
-    margin-top: 0;
-    color: white;
-    font-size: 4vw;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 0;
-    }
-  #message {
-    font-size: 5vw;
-    margin: auto 2%;
-  }
-  #message span {
-    font-size: 6vw;
-  }
-}
-/***********************************************************************************************************/
 
 /*current*/
-/*1st Div for box which includes header*/
-#projects-page .summary{
-    padding: 3% 0;
-    top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
+#projects-page .summary {
+	padding: 3% 0;
+	top: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
 }
 
 #projects-page .summary-box {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-height: none;
-    max-width: none;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-height: none;
+	max-width: none;
 }
 
 #projects-page .summary-description {
-   display: flex;
-   flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
-#current .title, #complete .title {
-    margin-bottom: 0;
+#current .title,
+#complete .title {
+	margin-bottom: 0;
 }

@@ -1,11 +1,13 @@
 <html lang="en">
 <head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Phoebe Badcock Portfolio</title>
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="myscripts.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Phoebe Badcock Portfolio</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--Styles sheet saved as FontAwsomeStyles-->
+	<script src="myscripts.js"></script>
 </head>
 <body>
 	<!-- START NAV -->
@@ -41,10 +43,10 @@
 	<!-- START HOME SECTION -->
 	<section id="home">
 		<div class="home-content">
-			<img src="/Images/headshot.png" alt="Head Shot" id="headshot">
+			<img src="/Images/headshot.png" alt="HeadShot" id="headshot">
 			<div class="about">
-				<div class="picture-text">
-					<img src="https://d33wubrfki0l68.cloudfront.net/6e15034b71981e7553ddb6ba5acdf9b64c152af1/2e27b/assets/site/location.svg"
+				<div id="picture-text">
+					<img src="/Images/location-icon.png"
 						 alt="Location Icon" id="location-icon" width="15" height="15">
 					<p>Milton Keynes</p>
 				</div>
@@ -139,12 +141,6 @@
 						</li>
 						<li>Handled updates and documented changes to the process.</li>
 					</ul>
-					<!--<h4>ONS Modelling</h4>
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>-->
 					<h4>CRA Handling</h4>
 					<ul>
 						<li>Effectively oversaw credit file reporting to credit bureaus, fostering strong
@@ -183,29 +179,14 @@
 						<li>Flask, Selenium, Webdriver, APIs</li>
 						<li>SQL (Postgres Database)</li>
 						<li>GitHub, Jira, Confluence</li>
-						<!--<li>Pycharm</li>
-						<li>Independent Learning & Research</li>
-						<li>Problem Solving</li>
-						<li>Communication</li>
-						<li>Time management</li>
-						<li>Multitasking</li>-->
 					</ul>
-					<!--<ul>
-						<li>Problem Solving</li>
-						<li>Communication</li>
-						<li>Documentation</li>
-						<li>Self-motivated</li>
-						<li>Multitasking</li>
-						<li>Time management</li>
-					</ul>-->
 					<h4>Education</h4>
 					<ul>
 						<li>University of Warwick, Mathematics BSc - First Class</li>
 						<li>A Levels: A*A*AA</li>
 					</ul>
 				</div>
-				<!--<a href="" target="_blank">Download CV</a>-->
-				<a href="/Phoebe Badcock CV.pdf" download="">
+				<a href="/PhoebeBadcockCV.pdf" download="PhoebeBadcockCV">
 					<button class="btn">
 						<i class="fa fa-download"></i>
 						Download CV
@@ -294,22 +275,22 @@
 			<span>Get in touch!</span>
 		</div>
 		<div class="summary">
-			<div id="linkedin-icon" class="icon"> <!--onmouseover="bobDown(id)" onmouseleave="bobUp(id)"-->
+			<div id="linkedin-icon" class="icon">
 				<a href="https://www.linkedin.com/in/phoebe-badcock-470165195/" class="contact-icon">
 					<img src="/Images/linkedin-crop.png" alt="LinkedIn Icon">
 				</a>
 			</div>
-			<div id="github-icon" class="icon"><!--onmouseover="bobDown(id)" onmouseleave="bobUp(id)"-->
+			<div id="github-icon" class="icon">
 				<a href="https://github.com/PhoebeBC" class="contact-icon">
 					<img src="/Images/github-logo-white.png" alt="GitHub Icon">
-					<p class="logo-text " style="margin: 0;">GitHub</p>
+					<p class="logo-text " style="padding-top: 5px;">GitHub</p>
 				</a>
 			</div>
-			<div onmouseover="showCopyButton()" onmouseleave="hideCopyButton()" onclick="copyFunction()"
-				 class="contact-icon picture-text icon" id="email">
-				<p id="copy-info" style="display: none;">Click to copy Email</p>
+			<div onclick="copyFunction()" class="contact-icon icon" id="email">
+				<p id="copy-info">Click to copy Email</p>
 				<img src="/Images/message-outline-256.png" alt="Email Icon" id="email-icon">
-				<p id="email-copy" class="logo-text">phoebe.badcock<br>@mail.com</p>
+				<p id="email-copy" class="logo-text" style="padding-bottom: 50px;">
+					phoebe.badcock<br>@mail.com</p>
 			</div>
 		</div>
 		<!--</div>-->
@@ -318,7 +299,5 @@
 	<footer>
 		<div id="reference">Hosted using GitHub Pages</div>
 	</footer>
-
-	<div id="sp-installed"></div>
 </body>
 </html>
