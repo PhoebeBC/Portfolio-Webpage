@@ -1,0 +1,83 @@
+<!--
+https://coolors.co/544b3d-73956f-b9caad-e5d4ed-ffffea
+
+<div style="background-color: 292F36;">gun metal</div>
+<div style="background-color: #436436;">Hunter Green</div>
+<div style="background-color: #96C0B7;">Cambridge Blue</div>
+<div style="background-color: #046e8f;">Cerculean</div>
+<div style="background-color: #E5c2c0;">Tea Rose</div>
+<div style="background-color: #214e34;">cal poly green</div>
+<div style="background-color: #e0fbfc;">light cyan</div>
+<div style="background-color: #98c1d9;">Powder blue</div>
+<div style="background-color: #56203d;">tyrian purple</div>
+<div style="background-color: #d4aa7d;">buff</div>
+<div style="background-color: #197278;">caribbean current</div>
+<div style="background-color: #068d9d;">blue munsell</div>
+<div style="background-color: #bcabae;">Rose quartz</div>
+<div style="background-color: #BBDB9B;">Celadon</div>
+<div style="background-color: #63474D">rose ebony</div>
+<div style="background-color: white; height: 100px;"></div>
+
+
+ &lt;!&ndash;Main white &ndash;&gt;
+<div style="background-color: #FFFFEA;">Ivory</div>
+ &lt;!&ndash;Main black &ndash;&gt;
+<div style="background-color: #292F36;">Black</div>
+ &lt;!&ndash;Primary color 1 green &ndash;&gt;
+<div style="background-color: #73956F;">Asparagus</div>
+ &lt;!&ndash;Secondary color 2 blue &ndash;&gt;
+<div style="background-color: #e0fbfc;">light cyan</div>
+ &lt;!&ndash;Primary color 2 blue &ndash;&gt;
+<div style="background-color: #095256;">midnight green</div>
+ &lt;!&ndash;Secondary color 1 green &ndash;&gt;
+<div style="background-color: #B9CAAD;">ash gay</div>
+ &lt;!&ndash;Tertiary color 1 &ndash;&gt;
+<div style="background-color: #544B3D">walnut brown</div>
+ &lt;!&ndash;Tertiary color 2 &ndash;&gt;
+&lt;!&ndash;<div style="background-color: #DECDF5;">Thistle</div>&ndash;&gt;
+<div style="background-color: #E5D4ED;">pale purple</div>
+
+<div style="background-color: white; height: 100px;"></div>
+
+
+<div style="font-family: 'Rale-way', sans-serif; font-size: 20px;">this is raleway</div>
+<div style="font-family: 'Poppins', sans-serif; font-size: 20px;">this is popins</div>
+<div style="font-family: tahoma; font-size: 20px;">this is tahoma</div>-->
+
+
+    <div class="gallery">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg">
+    </div>
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery::after {
+  content: "";
+  width: 350px;
+}
