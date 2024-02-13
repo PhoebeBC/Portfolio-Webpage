@@ -398,6 +398,14 @@ div#linkedin-icon {
 	text-align: center;
 }
 
+#github-icon p {
+    padding-top: 5%;
+}
+
+#email-copy {
+    padding-bottom: 30%;
+}
+
 #email:hover #copy-info {
 	display: block;
 	color: white;
@@ -601,6 +609,7 @@ footer {
 	#contact .summary {
 		gap: 5%;
 		margin-top: 4%;
+		max-height: fit-content;
 	}
 
 	#contact .summary #linkedin-icon,
