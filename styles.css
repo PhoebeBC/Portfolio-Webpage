@@ -392,13 +392,10 @@ div#linkedin-icon {
 }
 
 .logo-text {
-	margin-top: 0;
+	margin: 0;
 	color: white;
 	font-weight: 600;
 	text-align: center;
-}
-
-#github-icon p {
     padding-top: 5%;
 }
 
@@ -410,6 +407,7 @@ div#linkedin-icon {
 	display: block;
 	color: white;
 	z-index: 10;
+	padding-bottom: 5%;
 }
 
 #copy-info {
@@ -565,8 +563,7 @@ footer {
 		color: var(--tertiary);
 	}
 
-	#home,
-	#contact {
+	#home {
 		height: 100vh;
 	}
 
@@ -610,15 +607,12 @@ footer {
 		gap: 5%;
 		margin-top: 4%;
 		max-height: fit-content;
-	}
-
-	#contact .summary #linkedin-icon,
-	#contact .summary #github-icon {
-		max-height: 20%;
-	}
-
-	#contact .summary #email {
 		max-width: 25%;
+	}
+
+    .icon {
+        padding: 5%;
+		max-height: 20%;
 	}
 
 	#email {
@@ -627,14 +621,10 @@ footer {
 		justify-content: left;
 		align-items: center;
 		gap: 0;
+		max-width: 100%;
 	}
 
-	#email-icon {
-		margin-bottom: -10px;
-	}
-
-	#email p {
-		padding-left: 4%;
+	#contact .summary p {
 		margin-top: 0;
 		color: white;
 		font-size: 4vw;
